@@ -1,0 +1,816 @@
+{
+  "id": "coldcard-q",
+  "name": "Coldcard Q",
+  "purchasable": true,
+  "basic-information": {
+    "year": {
+      "value": "2024"
+    },
+    "assembled-in": {
+      "value": "Canada"
+    },
+    "diy": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "company": "coinkite",
+  "communities": {
+    "telegram": {
+      "value": "coldcard",
+      "url": "https://t.me/coldcard"
+    },
+    "reddit": {
+      "value": "coldcard",
+      "url": "https://www.reddit.com/r/coldcard/"
+    }
+  },
+  "official-store": {
+    "po-box-support": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    },
+    "btc-on-chain": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    },
+    "btc-lightning": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    },
+    "alt-coins": {
+      "value": "NO",
+      "supported": false
+    },
+    "credit-debit-card": {
+      "value": "YES",
+      "supported": true
+    }
+  },
+  "size-materials": {
+    "warranty": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    },
+    "weight": {
+      "value": "93g / 3.28oz"
+    },
+    "dimensions": {
+      "value": "120 x 75 x 22 mm"
+    },
+    "materials": {
+      "value": "Plastic"
+    },
+    "available-in-colors": {
+      "value": "NO",
+      "supported": false
+    },
+    "waterproof": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    }
+  },
+  "display": {
+    "screen": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    },
+    "screen-type": {
+      "value": "LCD"
+    },
+    "gorilla-glass": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    },
+    "color-screen": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "touch-screen": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    },
+    "screen-size": {
+      "value": "2.3\"",
+      "flag": "positive"
+    },
+    "screen-resolution": {
+      "value": "320 x 240 px"
+    }
+  },
+  "input": {
+    "controls": {
+      "value": "Buttons"
+    },
+    "qwerty-keyboard": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    }
+  },
+  "power": {
+    "battery": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    },
+    "removable-battery": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true
+    },
+    "battery-size": {
+      "value": "3x AAA batteries",
+      "flag": "positive",
+      "supported": true
+    },
+    "usb-charging": {
+      "value": "USB-C",
+      "flag": "positive",
+      "supported": true
+    },
+    "wireless-charging": {
+      "value": "NO",
+      "flag": "negative",
+      "supported": false
+    }
+  },
+  "connectivity": {
+    "usb-data": {
+      "value": "USB-C (disabled by default)",
+      "supported": true,
+      "texts": [
+        "Encrypted USB communication (MiTM protection)"
+      ]
+    },
+    "bluetooth": {
+      "value": "NO",
+      "supported": false
+    },
+    "wifi": {
+      "value": "NO",
+      "supported": false
+    },
+    "ethernet": {
+      "value": "NO",
+      "supported": false
+    },
+    "nfc": {
+      "value": "YES (disabled by default)",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "https://coldcard.com/docs/coldcard-mk4#nfc-v",
+          "url": "https://coldcard.com/docs/coldcard-mk4#nfc-v"
+        }
+      ]
+    },
+    "microsd-card": {
+      "value": "YES (2)",
+      "supported": true,
+      "flag": "positive"
+    },
+    "qr-scanner": {
+      "value": "YES (with LED illumination)",
+      "supported": true,
+      "flag": "positive"
+    },
+    "air-gapped": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    }
+  },
+  "security": {
+    "secure-element": {
+      "value": "YES (2)",
+      "supported": true,
+      "flag": "positive"
+    },
+    "supply-chain-physical-attacks": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "texts": [
+        "The device arrives sealed in a bag with a serial number, which you can verify when starting the device."
+      ],
+      "links": [
+        {
+          "title": "Supply Chain Trust Minimized",
+          "url": "https://blog.coinkite.com/supply-chain-trust-minimized/"
+        }
+      ]
+    },
+    "deterministic-nonces": {
+      "value": "YES",
+      "supported": true
+    },
+    "anti-klepto": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "networks": {
+    "btc-mainnet": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "btc-testnet": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Testnet Considered Useful",
+          "url": "https://blog.coinkite.com/testnet-considered-useful/"
+        }
+      ]
+    },
+    "alt-coins": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "firmware": {
+    "bitcoin-only-firmware": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "upgrade": {
+      "value": "From MicroSD Card",
+      "flag": "positive"
+    },
+    "latest-version": {
+      "value": "v1.3.0"
+    },
+    "latest-release-date": {
+      "value": "Sep 12, 2024"
+    },
+    "release-notes": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Release Notes",
+          "url": "https://coldcard.com/docs/upgrade"
+        }
+      ]
+    },
+    "source-available": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Source Code",
+          "url": "https://github.com/Coldcard/firmware"
+        }
+      ]
+    },
+    "open-source": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "license": {
+      "value": "MIT + anti-sell clause",
+      "links": [
+        {
+          "title": "License",
+          "url": "https://github.com/Coldcard/firmware/blob/master/COPYING-CC"
+        }
+      ]
+    },
+    "reproducible-builds": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Reproducible Builds",
+          "url": "https://github.com/Coldcard/firmware#reproducible-builds"
+        },
+        {
+          "title": "BitcoinBinary.org",
+          "url": "https://bitcoinbinary.org/"
+        }
+      ]
+    }
+  },
+  "device-lock": {
+    "pin-entry": {
+      "value": "On Device",
+      "flag": "positive",
+      "texts": [
+        "The PIN is formed by two parts: a prefix and a suffix. Each part of the PIN can have between 2 and 6 digits."
+      ]
+    },
+    "dummy-wallet": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "User Guide: Settings Menu",
+          "url": "https://coldcard.com/docs/settings"
+        }
+      ]
+    },
+    "dynamic-keypad": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "countdown-brick-reset-pin": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "texts": [
+        "Coldcard permanently bricks itself after entering wrong PIN 13 times!",
+        "Countdown to Brick: Set a special PIN code, and when used, the Coldcard is immediately bricked while a normal-looking countdown for login is shown (default 1 hour). As an alternative to bricking, you can make it consume all but the final PIN attempt.",
+        "Of course this countdown looks just like a normal “login countdown” but for some reason it errors out at the end of the period."
+      ],
+      "links": [
+        {
+          "title": "https://blog.coinkite.com/version-4.0.2-released/",
+          "url": "https://blog.coinkite.com/version-4.0.2-released/"
+        }
+      ]
+    },
+    "brick-reset-pin": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Brick Me PIN",
+          "url": "https://coldcard.com/docs/settings#brick-me-pin"
+        }
+      ]
+    },
+    "login-countdown": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Login Countdown and Nickname",
+          "url": "https://blog.coinkite.com/Login-Countdown-and-Nickname/"
+        }
+      ]
+    },
+    "anti-phishing-words": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "https://coldcard.com/docs/quick#initial-pin",
+          "url": "https://coldcard.com/docs/quick#initial-pin"
+        }
+      ]
+    },
+    "alphanumeric-pin": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "pattern-lock": {
+      "value": "NO",
+      "supported": false
+    },
+    "fingerprint-lock": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "private-keys": {
+    "stateless": {
+      "value": "Optional Stateless Use",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Ephemeral Seed",
+          "url": "https://coldcard.com/docs/ephemeral-seed"
+        }
+      ]
+    },
+    "user-added-entropy": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "texts": [
+        "You have the option of creating the seed value for your Coldcard by rolling a six-sided dice. This allows you to remove any risk of the Coldcard's random number generator (RNG) being compromised, and you are creating the private key directly."
+      ],
+      "links": [
+        {
+          "title": "User Guide: Verifying Dice Roll Math",
+          "url": "https://coldcard.com/docs/verifying-dice-roll-math"
+        },
+        {
+          "title": "Generating seed words with 256 bits of entropy by dice rolls",
+          "url": "https://coldcard.com/docs/paranoid/#generating-seed-words-with-256-bits-of-entropy-by-dice-rolls"
+        },
+        {
+          "title": "Verifying Dice Roll Math - Dice Rolls on Tails",
+          "url": "https://www.youtube.com/watch?v=GxdUCoELUu0"
+        }
+      ]
+    },
+    "multiple-private-keys": {
+      "value": "YES",
+      "flag": "positive",
+      "supported": true,
+      "links": [
+        {
+          "title": "Seed Vault",
+          "url": "https://coldcard.com/docs/temporary-seeds/#seed-vault"
+        }
+      ]
+    },
+    "passphrase-support": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Everything You Need To Know About Passphrases",
+          "url": "https://blog.coinkite.com/everything-you-need-to-know-about-passphrases/"
+        }
+      ]
+    },
+    "passphrase-entry": {
+      "value": "On Device",
+      "flag": "positive"
+    },
+    "master-key-fingerprint": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "bip85": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Bitcoin BIP-85 deterministic entropy",
+          "url": "https://bip85.com/"
+        },
+        {
+          "title": "User Guide: Export Deterministic Entropy (BIP-85)",
+          "url": "https://coldcard.com/docs/bip85"
+        }
+      ]
+    },
+    "shamir-backup": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "seed-xor": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "https://seedxor.com/",
+          "url": "https://seedxor.com/"
+        }
+      ]
+    },
+    "backup-recovery-microsd": {
+      "value": "YES (encrypted)",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "User Guide: Encrypted Backups",
+          "url": "https://coldcard.com/docs/backups"
+        }
+      ]
+    },
+    "create-12-words": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "create-24-words": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "display-12-24-words": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive"
+    },
+    "import-12-words": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive"
+    },
+    "import-24-words": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive"
+    },
+    "seed-qr": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    }
+  },
+  "address-format": {
+    "legacy": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "nested-segwit": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "native-segwit": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "taproot": {
+      "value": "Experimental",
+      "supported": true,
+      "flag": "neutral",
+      "links": [
+        {
+          "title": "Taproot",
+          "url": "https://github.com/Coldcard/firmware/blob/edge/docs/taproot.md"
+        }
+      ]
+    }
+  },
+  "addresses": {
+    "view-address-text": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Address Explorer",
+          "url": "https://coldcard.com/docs/address-explorer/"
+        }
+      ]
+    },
+    "view-address-qr": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Address Explorer",
+          "url": "https://coldcard.com/docs/address-explorer/"
+        }
+      ]
+    },
+    "export-address-sdcard": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Address Explorer",
+          "url": "https://coldcard.com/docs/address-explorer/"
+        }
+      ]
+    },
+    "verify-address-qr": {
+      "value": "On Device",
+      "supported": true,
+      "flag": "positive"
+    }
+  },
+  "signing": {
+    "multi-sig": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "frost": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "ur-2-animated-qrs": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "bbqr": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "nfc-push-tx": {
+      "value": "YES",
+      "supported": true,
+      "links": [
+        {
+          "title": "NFC Push Tx",
+          "url": "https://github.com/Coldcard/firmware/blob/24bfca106a683537f9d9398a12f4e74bd4e4b153/docs/nfc-pushtx.md"
+        },
+        {
+          "title": "NFC PushTx and More Updates",
+          "url": "https://blog.coinkite.com/nfc-pushtx-released/"
+        }
+      ]
+    }
+  },
+  "fees": {
+    "fee-control": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "replace-by-fee": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "child-pays-for-parent": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    }
+  },
+  "privacy": {
+    "coin-control": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "custom-node": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "tor": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "silent-payments": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    }
+  },
+  "other-features": {
+    "miniscript": {
+      "value": "Experimental",
+      "supported": true,
+      "flag": "neutral",
+      "links": [
+        {
+          "title": "Miniscript",
+          "url": "https://github.com/Coldcard/firmware/blob/edge/docs/miniscript.md"
+        }
+      ]
+    },
+    "virtual-disk-mode": {
+      "value": "YES (disabled by default)",
+      "supported": true
+    },
+    "password-manager": {
+      "value": "YES",
+      "supported": true,
+      "links": [
+        {
+          "title": "User Guide: BIP-85 Passwords",
+          "url": "https://coldcard.com/docs/bip85-passwords"
+        }
+      ]
+    },
+    "u2f-authentication": {
+      "value": "NO",
+      "supported": false
+    },
+    "fido-authentication": {
+      "value": "NO",
+      "supported": false
+    },
+    "hardware-based-ssh-gpg": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "official-apps": {
+    "web-app": {
+      "value": "NO",
+      "supported": false
+    },
+    "windows-app": {
+      "value": "NO",
+      "supported": false
+    },
+    "macos-app": {
+      "value": "NO",
+      "supported": false
+    },
+    "linux-app": {
+      "value": "NO",
+      "supported": false
+    },
+    "chrome-extension": {
+      "value": "NO",
+      "supported": false
+    },
+    "firefox-extension": {
+      "value": "NO",
+      "supported": false
+    },
+    "edge-extension": {
+      "value": "NO",
+      "supported": false
+    },
+    "android-app": {
+      "value": "NO",
+      "supported": false
+    },
+    "ios-app": {
+      "value": "NO",
+      "supported": false
+    }
+  },
+  "third-party-apps": {
+    "nunchuk": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "electrum": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "sparrow": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "specter-desktop": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "blockstream-green": {
+      "value": "Watch-only",
+      "supported": true,
+      "flag": "neutral"
+    },
+    "bluewallet": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Coldcard with Bluewallet",
+          "url": "https://bluewallet.io/docs/coldcard/"
+        }
+      ]
+    },
+    "bitcoin-keeper": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "liana": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "casa": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "unchained": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    }
+  }
+}

@@ -1,0 +1,143 @@
+name: Check Releases Template
+
+on:
+  workflow_call:
+    inputs:
+      item-id:
+        required: true
+        type: string
+      social-enabled:
+        required: false
+        default: false
+        type: boolean
+      changelog-url:
+        default: "null"
+        required: false
+        type: string
+      github-org:
+        default: "null"
+        required: false
+        type: string
+      github-repo:
+        default: "null"
+        required: false
+        type: string
+      gitlabProjectId:
+        default: "null"
+        required: false
+        type: string
+      tag:
+        required: false
+        default: false
+        type: boolean
+      latestRelease:
+        required: false
+        default: false
+        type: boolean
+      allReleases:
+        required: false
+        default: false
+        type: boolean
+      allReleasesInclude:
+        default: "null"
+        required: false
+        type: string
+      allReleasesExclude:
+        default: "null"
+        required: false
+        type: string
+      assetsMatch:
+        default: "null"
+        required: false
+        type: string
+
+jobs:
+  fetch-release:
+    runs-on: ubuntu-latest
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITLAB_TOKEN: ${{ secrets.GITLAB_TOKEN }}
+    outputs:
+      releaseVersion: ${{ steps.fetch-release-step.outputs.releaseVersion }}
+      releaseDate: ${{ steps.fetch-release-step.outputs.releaseDate }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: scripts
+
+    - name: Fetch release
+      id: fetch-release-step
+      working-directory: scripts
+      run: |
+        OUTPUT=$(node fetch-latest-release.js ${{ inputs.item-id }} ${{ inputs.changelog-url }} ${{ inputs.github-org }} ${{ inputs.github-repo }} ${{ inputs.gitlabProjectId }} ${{ inputs.tag }} ${{ inputs.latestRelease }} ${{ inputs.allReleases }} ${{ inputs.allReleasesInclude }} ${{ inputs.allReleasesExclude }}) 
+        printf "%s\n" "$OUTPUT"
+        while IFS= read -r line; do
+            if [[ $line == releaseVersion=* ]]; then
+                echo "$line" >> "$GITHUB_OUTPUT"
+            elif [[ $line == releaseDate=* ]]; then
+                echo "$line" >> "$GITHUB_OUTPUT"
+            fi
+        done <<< "$OUTPUT"
+  commit-release:
+    runs-on: ubuntu-latest
+    if: needs.fetch-release.outputs.releaseVersion != ''
+    needs: fetch-release
+    outputs:
+      releaseVersion: ${{ steps.fetch-variables-step.outputs.releaseVersion }}
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: scripts
+
+    - name: Fetch variables
+      id: fetch-variables-step
+      working-directory: scripts
+      run: |
+        CHANGELOG_URL=$(node changelog-url.js ${{ inputs.item-id }})
+        echo "CHANGELOG_URL=${CHANGELOG_URL}" >> "$GITHUB_ENV"
+
+        echo "releaseVersion=${{ needs.fetch-release.outputs.releaseVersion }}" >> "$GITHUB_OUTPUT"
+
+        MESSAGE=$(node social-message.js ${{ inputs.item-id }} "${{ needs.fetch-release.outputs.releaseVersion }}")
+        echo ""
+        echo "Message to post:"
+        echo "-------------------"
+        echo "$MESSAGE"
+        echo "-------------------"
+
+    - name: Update Release
+      working-directory: scripts
+      run: |
+        node update-release.js ${{ inputs.item-id }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }}"
+
+    - name: Git Diff
+      run: git diff
+
+    - name: Create Pull Request
+      uses: peter-evans/create-pull-request@v6.0.5
+      id: create-pull-request
+      with:
+        title: "New ${{ inputs.item-id }} release"
+        commit-message: "New ${{ inputs.item-id }} release"
+        branch: "${{ inputs.item-id }}/new-release"
+        add-paths: "items/*.json"
+        reviewers: "${{ env.ASSIGNEE }}"
+        body: ${{ env.CHANGELOG_URL }}

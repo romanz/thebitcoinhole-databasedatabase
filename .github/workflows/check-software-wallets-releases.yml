@@ -1,0 +1,269 @@
+name: Check Software Wallet Releases
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 23 * * *"  # Runs every day at 23:20 UTC
+    - cron: "20 11 * * *"  # Runs every day at 11:20 UTC
+
+jobs:
+  aqua:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: aqua
+      github-org: AquaWallet
+      github-repo: aqua-wallet
+      platforms: android,ios
+      latestRelease: true
+      social-enabled: true
+  bitcoin-core:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bitcoin-core
+      github-org: bitcoin
+      github-repo: bitcoin
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  bitcoin-keeper:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bitcoin-keeper
+      github-org: bithyve
+      github-repo: bitcoin-keeper
+      platforms: android,ios
+      latestRelease: true
+      social-enabled: true
+  bitcoin-keeper-desktop:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bitcoin-keeper
+      github-org: bithyve
+      github-repo: keeper-desktop
+      platforms: linux,macos,windows
+      latestRelease: true
+      social-enabled: true
+  bitcoin-safektop:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bitcoin-safe
+      github-org: andreasgriffin
+      github-repo: bitcoin-safe
+      platforms: linux,macos,windows
+      latestRelease: true
+      social-enabled: true
+  blueWallet-android:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bluewallet
+      github-org: BlueWallet
+      github-repo: BlueWallet
+      platforms: android
+      allReleases: true
+      assetsMatch: "apk"
+      social-enabled: true
+  blueWallet-ios:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bluewallet
+      github-org: BlueWallet
+      github-repo: BlueWallet
+      platforms: ios
+      allReleases: true
+      assetsMatch: "ipa"
+      social-enabled: true
+  blueWallet-macos:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: bluewallet
+      github-org: BlueWallet
+      github-repo: BlueWallet
+      platforms: macos
+      allReleases: true
+      assetsMatch: "dmg"
+      social-enabled: true
+  electrum:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: electrum
+      changelog-url: https://raw.githubusercontent.com/spesmilo/electrum/master/RELEASE-NOTES
+      platforms: windows,macos,linux,android
+      social-enabled: true
+  envoy:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: envoy
+      github-org: Foundation-Devices
+      github-repo: envoy
+      platforms: android,ios
+      latestRelease: true
+      social-enabled: true
+  green-desktop:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: green
+      github-org: Blockstream
+      github-repo: green_qt
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  green-android:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: green
+      github-org: Blockstream
+      github-repo: green_android
+      platforms: android
+      latestRelease: true
+      social-enabled: true
+  green-ios:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: green
+      github-org: Blockstream
+      github-repo: green_ios
+      platforms: ios
+      latestRelease: true
+      social-enabled: true
+  liana:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: liana
+      github-org: wizardsardine
+      github-repo: liana
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  muun-android:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: muun
+      changelog-url: https://raw.githubusercontent.com/muun/apollo/master/android/CHANGELOG.md
+      platforms: android
+      social-enabled: true
+  muun-ios:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: muun
+      github-org: muun
+      github-repo: falcon
+      tag: true
+      platforms: ios
+      social-enabled: true
+  my-citadel-desktop:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: my-citadel
+      github-org: mycitadel
+      github-repo: mycitadel-desktop
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  my-citadel-ios:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: my-citadel
+      github-org: mycitadel
+      github-repo: mycitadel-apple
+      platforms: ios
+      latestRelease: true
+      social-enabled: true
+  nunchuk-android:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: nunchuk
+      github-org: nunchuk-io
+      github-repo: nunchuk-android
+      platforms: android
+      latestRelease: true
+      social-enabled: true
+  nunchuk-desktop:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: nunchuk
+      github-org: nunchuk-io
+      github-repo: nunchuk-desktop
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  phoenix:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: phoenix
+      github-org: ACINQ
+      github-repo: phoenix
+      platforms: android,ios
+      latestRelease: true
+      social-enabled: true
+  proton-wallet:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: proton-wallet
+      github-org: ProtonWallet
+      github-repo: flutter-app
+      platforms: android
+      tag: true
+      social-enabled: true
+  simple-bitcoin-wallet:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: simple-bitcoin-wallet
+      github-org: akumaigorodski
+      github-repo: wallet
+      platforms: android
+      latestRelease: true
+      social-enabled: true
+  sparrow:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: sparrow
+      github-org: sparrowwallet
+      github-repo: sparrow
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  specter:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: specter
+      github-org: cryptoadvance
+      github-repo: specter-desktop
+      platforms: windows,macos,linux,umbrel-os
+      latestRelease: true
+      social-enabled: true
+  specter-start-os:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: specter
+      github-org: Start9Labs
+      github-repo: specter-startos
+      platforms: start-os
+      latestRelease: true
+  stack-wallet:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: stack-wallet
+      github-org: cypherstack
+      github-repo: stack_wallet
+      platforms: android,ios,windows,macos,linux
+      allReleases: true
+      allReleasesInclude: "Stack Wallet"
+      social-enabled: true
+  wasabi:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: wasabi-wallet
+      github-org: zkSNACKs
+      github-repo: WalletWasabi
+      platforms: windows,macos,linux
+      latestRelease: true
+      social-enabled: true
+  zeus:
+    uses: ./.github/workflows/check-release-template.yml
+    with:
+      item-id: zeus
+      github-org: ZeusLN
+      github-repo: zeus
+      platforms: android,ios
+      latestRelease: true
+      social-enabled: true
