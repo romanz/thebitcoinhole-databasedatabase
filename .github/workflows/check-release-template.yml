@@ -74,11 +74,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: scripts
+      working-directory: item-types/${{ inputs.item-type }}/scripts
 
     - name: Fetch release
       id: fetch-release-step
-      working-directory: scripts
+      working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
         OUTPUT=$(node fetch-latest-release.js ${{ inputs.item-id }} ${{ inputs.changelog-url }} ${{ inputs.github-org }} ${{ inputs.github-repo }} ${{ inputs.gitlabProjectId }} ${{ inputs.tag }} ${{ inputs.latestRelease }} ${{ inputs.allReleases }} ${{ inputs.allReleasesInclude }} ${{ inputs.allReleasesExclude }}) 
         printf "%s\n" "$OUTPUT"
