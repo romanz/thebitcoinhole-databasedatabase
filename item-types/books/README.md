@@ -1,5 +1,9 @@
 # The Bitcoin Hole - Bitcoin Books
 
+## Introduction
+
+This repository goal is to have the more complete database of Bitcoin books, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
+
 ## Collaboration
 
 Inside the `items` directory, there is a JSON file for each book, with all the data about it. To collaborate (adding missing data, fixing wrong data or adding a new book), just fork the repository and send a pull request with the changes.

@@ -2,11 +2,13 @@
 
 ## Introduction
 
-Comparing seed phrase metal backup solutions feature by feature
+Seed backup solutions are tools that help users securely store and protect their Bitcoin recovery phrases. They focus on safeguarding the seed phrase from loss, theft, or damage. These solutions come in various forms, including metal backups, encrypted digital storage, and secure offline methods, ensuring long-term access to funds even if the primary wallet is lost or compromised.
+
+This repository goal is to have the more complete database of Seed Backup Solutions features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
 
 ## Collaboration
 
-Inside the `items` directory, there is a JSON file for each seed backup gadget, with all the data about it. To collaborate (adding missing data, fixing wrong data or adding a new item), just fork the repository and send a pull request with the changes.
+Inside the `items` directory, there is a JSON file for each seed backup solution, with all the data about it. To collaborate (adding missing data, fixing wrong data or adding a new item), just fork the repository and send a pull request with the changes.
 
 Before sending the pull request, please run the following commands to format the JSON:
 

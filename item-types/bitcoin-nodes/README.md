@@ -4,6 +4,8 @@
 
 For bitcoin to function reliably and securely, it relies on the voluntary participation of thousands of individuals worldwide. Nodes, which make up the bitcoin network and verify transactions and blocks, are crucial to this process. There are many reasons to consider running your own bitcoin node, including personal benefits and the benefits to the security and resilience of the bitcoin ecosystem.
 
+This repository goal is to have the more complete database of Bitcoin Nodes features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
+
 ## Collaboration
 
 Inside the `items` directory, there is a JSON file for each node, with all the data about it. To collaborate (adding missing data, fixing wrong data or adding a new node), just fork the repository and send a pull request with the changes.

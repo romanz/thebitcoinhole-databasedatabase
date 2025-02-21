@@ -6,6 +6,8 @@ Unlike traditional assets such as real estate or stocks, bitcoin is often stored
 
 Bitcoin inheritance services offer a solution to this problem by providing individuals with the tools and strategies to securely pass on their bitcoin holdings to beneficiaries. These services typically include features such as multi-signature wallets, secure storage solutions, and detailed instructions for heirs on how to access the assets in the event of the owner's death or incapacitation.
 
+This repository goal is to have the more complete database of Inheritance Services features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
+
 ## Collaboration
 
 Inside the `items` directory, there is a JSON file for each item, with all the data about it. To collaborate (adding missing data, fixing wrong data or adding a new item), just fork the repository and send a pull request with the changes.

@@ -4,7 +4,7 @@
 
 Software wallets, also known as hot wallets, are applications that enable users to store, manage, and transact with Bitcoin. Unlike hardware wallets, which are physical devices, software wallets are digital and run on various platforms, including desktop, mobile, and web.
 
-This project goal is to have the more complete database of Bitcoin Software Wallets features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new wallets.
+This repository goal is to have the more complete database of Bitcoin Software Wallets features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
 
 ## Collaboration
 
