@@ -10,6 +10,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitbox02-btconly
+      item-type: hardware-wallets
       github-org: digitalbitbox
       github-repo: bitbox02-firmware
       allReleases: true
@@ -19,6 +20,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitbox02-multi
+      item-type: hardware-wallets
       github-org: digitalbitbox
       github-repo: bitbox02-firmware
       allReleases: true
@@ -27,23 +29,27 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: coldcard-mk4
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/Coldcard/firmware/master/releases/ChangeLog.md
       social-enabled: true
   coldcard-q:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: coldcard-q
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/Coldcard/firmware/master/releases/ChangeLog.md
       social-enabled: true
   coolwallet-pro:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: coolwallet-pro
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/CoolBitX-Technology/coolwallet-pro-se/main/CHANGELOG.md
   cypherock-x1:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: cypherock-x1
+      item-type: hardware-wallets
       github-org: Cypherock
       github-repo: x1_wallet_firmware
       latestRelease: true
@@ -51,6 +57,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: gridplus-lattice1
+      item-type: hardware-wallets
       github-org: GridPlus
       github-repo: lattice-software-releases
       allReleases: true
@@ -59,6 +66,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: jade
+      item-type: hardware-wallets
       github-org: Blockstream
       github-repo: Jade
       tag: true
@@ -67,6 +75,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: jade-plus
+      item-type: hardware-wallets
       github-org: Blockstream
       github-repo: Jade
       tag: true
@@ -75,6 +84,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: jade-plus-metal
+      item-type: hardware-wallets
       github-org: Blockstream
       github-repo: Jade
       tag: true
@@ -83,6 +93,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: keepkey
+      item-type: hardware-wallets
       github-org: keepkey
       github-repo: keepkey-firmware
       latestRelease: true
@@ -90,6 +101,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: keystone-3-pro
+      item-type: hardware-wallets
       github-org: KeystoneHQ
       github-repo: keystone3-firmware
       allReleases: true
@@ -99,6 +111,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: krux
+      item-type: hardware-wallets
       github-org: selfcustody
       github-repo: krux
       latestRelease: true
@@ -107,6 +120,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: onekey-classic-1s
+      item-type: hardware-wallets
       github-org: OneKeyHQ
       github-repo: firmware
       allReleases: true
@@ -115,6 +129,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: onekey-pro
+      item-type: hardware-wallets
       github-org: OneKeyHQ
       github-repo: firmware
       allReleases: true
@@ -123,6 +138,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: passport-batch-2
+      item-type: hardware-wallets
       github-org: Foundation-Devices
       github-repo: passport2
       latestRelease: true
@@ -131,6 +147,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: prokey-optimum
+      item-type: hardware-wallets
       github-org: prokey-io
       github-repo: prokey-optimum-firmware
       latestRelease: true
@@ -138,6 +155,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: satochip
+      item-type: hardware-wallets
       github-org: Toporin
       github-repo: SatochipApplet
       latestRelease: true
@@ -145,6 +163,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: satochip-diy
+      item-type: hardware-wallets
       github-org: Toporin
       github-repo: SatochipApplet
       latestRelease: true
@@ -152,6 +171,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: seedsigner
+      item-type: hardware-wallets
       github-org: SeedSigner
       github-repo: seedsigner
       tag: true
@@ -160,6 +180,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: specter-diy
+      item-type: hardware-wallets
       github-org: cryptoadvance
       github-repo: specter-diy
       latestRelease: true
@@ -168,23 +189,27 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: trezor-model-one
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/trezor/trezor-firmware/master/legacy/firmware/CHANGELOG.md
       social-enabled: true
   trezor-model-t:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: trezor-model-t
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/trezor/trezor-firmware/master/core/CHANGELOG.md
   trezor-safe-3:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: trezor-safe-3
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/trezor/trezor-firmware/master/core/CHANGELOG.md
       social-enabled: true
   trezor-safe-3-btconly:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: trezor-safe-3-btconly
+      item-type: hardware-wallets
       changelog-url: https://raw.githubusercontent.com/trezor/trezor-firmware/master/core/CHANGELOG.md
       social-enabled: true
     

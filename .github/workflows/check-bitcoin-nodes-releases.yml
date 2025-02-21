@@ -10,6 +10,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-core
+      item-type: bitcoin-nodes
       github-org: bitcoin
       github-repo: bitcoin
       latestRelease: true
@@ -18,6 +19,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-knots
+      item-type: bitcoin-nodes
       github-org: bitcoinknots
       github-repo: bitcoin
       latestRelease: true
@@ -26,6 +28,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: citadel
+      item-type: bitcoin-nodes
       gitlabProjectId: "48888641"
       tag: true
       social-enabled: true
@@ -33,6 +36,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: minibolt
+      item-type: bitcoin-nodes
       github-org: minibolt-guide
       github-repo: minibolt
       latestRelease: true
@@ -41,44 +45,52 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: mynode-community-edition
+      item-type: bitcoin-nodes
       changelog-url: https://raw.githubusercontent.com/mynodebtc/mynode/master/CHANGELOG
       social-enabled: true
   mynode-model-one:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: mynode-model-one
+      item-type: bitcoin-nodes
       changelog-url: https://raw.githubusercontent.com/mynodebtc/mynode/master/CHANGELOG
   mynode-model-two:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: mynode-model-two
+      item-type: bitcoin-nodes
       changelog-url: https://raw.githubusercontent.com/mynodebtc/mynode/master/CHANGELOG
   mynode-premium:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: mynode-premium
+      item-type: bitcoin-nodes
       changelog-url: https://raw.githubusercontent.com/mynodebtc/mynode/master/CHANGELOG
   nodl-one-mark-2:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: nodl-one-mark-2
+      item-type: bitcoin-nodes
       changelog-url: https://gitlab.lightning-solutions.eu/nodl-private/nodl-admin-private/-/raw/nodl-one/www/changelog.txt?ref_type=heads
       social-enabled: true
   nodl-two:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: nodl-two
+      item-type: bitcoin-nodes
       changelog-url: https://gitlab.lightning-solutions.eu/nodl-private/nodl-admin-private/-/raw/nodl-two/www/changelog.txt?ref_type=heads
   parmanode:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: parmanode
+      item-type: bitcoin-nodes
       changelog-url: https://raw.githubusercontent.com/ArmanTheParman/Parmanode/refs/heads/master/changelog.txt
       social-enabled: true
   raspiblitz:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: raspiblitz
+      item-type: bitcoin-nodes
       github-org: raspiblitz
       github-repo: raspiblitz
       latestRelease: true
@@ -87,6 +99,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: raspibolt
+      item-type: bitcoin-nodes
       github-org: raspibolt
       github-repo: raspibolt
       latestRelease: true
@@ -95,6 +108,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: start9-diy
+      item-type: bitcoin-nodes
       github-org: Start9Labs
       github-repo: start-os
       latestRelease: true
@@ -103,6 +117,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: start9-server-one
+      item-type: bitcoin-nodes
       github-org: Start9Labs
       github-repo: start-os
       latestRelease: true
@@ -110,6 +125,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: start9-server-pure
+      item-type: bitcoin-nodes
       github-org: Start9Labs
       github-repo: start-os
       latestRelease: true
@@ -117,6 +133,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: umbrel-diy
+      item-type: bitcoin-nodes
       github-org: getumbrel
       github-repo: umbrel
       allReleases: true
@@ -126,6 +143,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: umbrel-home
+      item-type: bitcoin-nodes
       github-org: getumbrel
       github-repo: umbrel
       allReleases: true

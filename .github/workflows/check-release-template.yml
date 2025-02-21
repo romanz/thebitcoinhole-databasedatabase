@@ -6,6 +6,9 @@ on:
       item-id:
         required: true
         type: string
+      item-type:
+        required: true
+        type: string
       social-enabled:
         required: false
         default: false
@@ -105,11 +108,11 @@ jobs:
 
     - name: Install dependencies
       run: npm install
-      working-directory: scripts
+      working-directory: item-types/${{ inputs.item-type }}/scripts
 
     - name: Fetch variables
       id: fetch-variables-step
-      working-directory: scripts
+      working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
         CHANGELOG_URL=$(node changelog-url.js ${{ inputs.item-id }})
         echo "CHANGELOG_URL=${CHANGELOG_URL}" >> "$GITHUB_ENV"
@@ -124,7 +127,7 @@ jobs:
         echo "-------------------"
 
     - name: Update Release
-      working-directory: scripts
+      working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
         node update-release.js ${{ inputs.item-id }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }}"
 
@@ -138,6 +141,6 @@ jobs:
         title: "New ${{ inputs.item-id }} release"
         commit-message: "New ${{ inputs.item-id }} release"
         branch: "${{ inputs.item-id }}/new-release"
-        add-paths: "items/*.json"
+        add-paths: "item-types/${{ inputs.item-type }}/items/*.json"
         reviewers: "${{ env.ASSIGNEE }}"
         body: ${{ env.CHANGELOG_URL }}

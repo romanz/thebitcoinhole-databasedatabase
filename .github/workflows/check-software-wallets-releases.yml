@@ -11,6 +11,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: aqua
+      item-type: software-wallets
       github-org: AquaWallet
       github-repo: aqua-wallet
       platforms: android,ios
@@ -20,6 +21,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-core
+      item-type: software-wallets
       github-org: bitcoin
       github-repo: bitcoin
       platforms: windows,macos,linux
@@ -29,6 +31,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-keeper
+      item-type: software-wallets
       github-org: bithyve
       github-repo: bitcoin-keeper
       platforms: android,ios
@@ -38,6 +41,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-keeper
+      item-type: software-wallets
       github-org: bithyve
       github-repo: keeper-desktop
       platforms: linux,macos,windows
@@ -47,6 +51,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bitcoin-safe
+      item-type: software-wallets
       github-org: andreasgriffin
       github-repo: bitcoin-safe
       platforms: linux,macos,windows
@@ -56,6 +61,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bluewallet
+      item-type: software-wallets
       github-org: BlueWallet
       github-repo: BlueWallet
       platforms: android
@@ -66,6 +72,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bluewallet
+      item-type: software-wallets
       github-org: BlueWallet
       github-repo: BlueWallet
       platforms: ios
@@ -76,6 +83,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: bluewallet
+      item-type: software-wallets
       github-org: BlueWallet
       github-repo: BlueWallet
       platforms: macos
@@ -86,6 +94,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: electrum
+      item-type: software-wallets
       changelog-url: https://raw.githubusercontent.com/spesmilo/electrum/master/RELEASE-NOTES
       platforms: windows,macos,linux,android
       social-enabled: true
@@ -93,6 +102,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: envoy
+      item-type: software-wallets
       github-org: Foundation-Devices
       github-repo: envoy
       platforms: android,ios
@@ -102,6 +112,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: green
+      item-type: software-wallets
       github-org: Blockstream
       github-repo: green_qt
       platforms: windows,macos,linux
@@ -111,6 +122,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: green
+      item-type: software-wallets
       github-org: Blockstream
       github-repo: green_android
       platforms: android
@@ -120,6 +132,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: green
+      item-type: software-wallets
       github-org: Blockstream
       github-repo: green_ios
       platforms: ios
@@ -129,6 +142,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: liana
+      item-type: software-wallets
       github-org: wizardsardine
       github-repo: liana
       platforms: windows,macos,linux
@@ -138,6 +152,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: muun
+      item-type: software-wallets
       changelog-url: https://raw.githubusercontent.com/muun/apollo/master/android/CHANGELOG.md
       platforms: android
       social-enabled: true
@@ -145,6 +160,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: muun
+      item-type: software-wallets
       github-org: muun
       github-repo: falcon
       tag: true
@@ -154,6 +170,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: my-citadel
+      item-type: software-wallets
       github-org: mycitadel
       github-repo: mycitadel-desktop
       platforms: windows,macos,linux
@@ -163,6 +180,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: my-citadel
+      item-type: software-wallets
       github-org: mycitadel
       github-repo: mycitadel-apple
       platforms: ios
@@ -172,6 +190,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: nunchuk
+      item-type: software-wallets
       github-org: nunchuk-io
       github-repo: nunchuk-android
       platforms: android
@@ -181,6 +200,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: nunchuk
+      item-type: software-wallets
       github-org: nunchuk-io
       github-repo: nunchuk-desktop
       platforms: windows,macos,linux
@@ -190,6 +210,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: phoenix
+      item-type: software-wallets
       github-org: ACINQ
       github-repo: phoenix
       platforms: android,ios
@@ -199,6 +220,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: proton-wallet
+      item-type: software-wallets
       github-org: ProtonWallet
       github-repo: flutter-app
       platforms: android
@@ -208,6 +230,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: simple-bitcoin-wallet
+      item-type: software-wallets
       github-org: akumaigorodski
       github-repo: wallet
       platforms: android
@@ -217,6 +240,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: sparrow
+      item-type: software-wallets
       github-org: sparrowwallet
       github-repo: sparrow
       platforms: windows,macos,linux
@@ -226,6 +250,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: specter
+      item-type: software-wallets
       github-org: cryptoadvance
       github-repo: specter-desktop
       platforms: windows,macos,linux,umbrel-os
@@ -235,6 +260,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: specter
+      item-type: software-wallets
       github-org: Start9Labs
       github-repo: specter-startos
       platforms: start-os
@@ -243,6 +269,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: stack-wallet
+      item-type: software-wallets
       github-org: cypherstack
       github-repo: stack_wallet
       platforms: android,ios,windows,macos,linux
@@ -253,6 +280,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: wasabi-wallet
+      item-type: software-wallets
       github-org: zkSNACKs
       github-repo: WalletWasabi
       platforms: windows,macos,linux
@@ -262,6 +290,7 @@ jobs:
     uses: ./.github/workflows/check-release-template.yml
     with:
       item-id: zeus
+      item-type: software-wallets
       github-org: ZeusLN
       github-repo: zeus
       platforms: android,ios
