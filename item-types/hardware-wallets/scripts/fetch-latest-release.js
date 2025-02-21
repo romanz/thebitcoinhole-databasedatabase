@@ -3,14 +3,17 @@ const fs = require('fs');
 const axios = require('axios');
 
 const itemId = process.argv[2];
-const changelogUrl = process.argv[3];
-const owner = process.argv[4];
-const repo = process.argv[5];
-const tag = process.argv[6];
-const latestRelease = process.argv[7];
-const allReleases = process.argv[8];
-const allReleasesInclude = process.argv[9];
-const allReleasesExclude = process.argv[10];
+const platforms = process.argv[3];
+const changelogUrl = process.argv[4];
+const owner = process.argv[5];
+const repo = process.argv[6];
+const gitlabProjectId = process.argv[7];
+const tag = process.argv[8];
+const latestRelease = process.argv[8];
+const allReleases = process.argv[10];
+const allReleasesInclude = process.argv[11];
+const allReleasesExclude = process.argv[12];
+const assetsMatch = process.argv[13];
 
 const githubApiKey = process.env.GITHUB_TOKEN
 
