@@ -15,6 +15,8 @@ This repository goal is to have the more complete database of Hardware Wallets, 
 
 The [thebitcoinhole.com](https://thebitcoinhole.com/) website offers Hardware Wallets, Software Wallets, Bitcoin Nodes, Seed Backup Solutions, Inheritance Services & Bitcoin Books comparisons using this database.
 
+![Screenshoot](images/screenshot.png)
+
 ## Sponsor this project
 Sponsor this project to help us get the funding we need to continue working on it.
 
