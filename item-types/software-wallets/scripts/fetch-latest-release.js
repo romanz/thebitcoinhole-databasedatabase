@@ -32,11 +32,11 @@ var headers = {
   };
 var apiUrl 
 if (tag == "true") {
-    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/tags`;
+    apiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/tags`;
 } else if (latestRelease == "true") {
-    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/releases/latest`;
+    apiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/releases/latest`;
 } else if (allReleases == "true") {
-    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/releases`;
+    apiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/releases`;
 } else if (changelogUrl != "null") {
     apiUrl = changelogUrl
     headers = {}
