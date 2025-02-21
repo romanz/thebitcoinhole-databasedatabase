@@ -116,15 +116,7 @@ jobs:
       run: |
         CHANGELOG_URL=$(node changelog-url.js ${{ inputs.item-id }})
         echo "CHANGELOG_URL=${CHANGELOG_URL}" >> "$GITHUB_ENV"
-
         echo "releaseVersion=${{ needs.fetch-release.outputs.releaseVersion }}" >> "$GITHUB_OUTPUT"
-
-        MESSAGE=$(node social-message.js ${{ inputs.item-id }} "${{ needs.fetch-release.outputs.releaseVersion }}")
-        echo ""
-        echo "Message to post:"
-        echo "-------------------"
-        echo "$MESSAGE"
-        echo "-------------------"
 
     - name: Update Release
       working-directory: item-types/${{ inputs.item-type }}/scripts
@@ -135,7 +127,7 @@ jobs:
       run: git diff
 
     - name: Create Pull Request
-      uses: peter-evans/create-pull-request@v6.0.5
+      uses: peter-evans/create-pull-request@v7.0.6
       id: create-pull-request
       with:
         title: "New ${{ inputs.item-id }} release"
@@ -143,4 +135,5 @@ jobs:
         branch: "${{ inputs.item-id }}/new-release"
         add-paths: "item-types/${{ inputs.item-type }}/items/*.json"
         reviewers: "${{ env.ASSIGNEE }}"
+        labels: "${{ inputs.item-type }}"
         body: ${{ env.CHANGELOG_URL }}
