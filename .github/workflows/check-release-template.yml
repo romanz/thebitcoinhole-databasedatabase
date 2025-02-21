@@ -9,10 +9,6 @@ on:
       item-type:
         required: true
         type: string
-      social-enabled:
-        required: false
-        default: false
-        type: boolean
       changelog-url:
         default: "null"
         required: false
