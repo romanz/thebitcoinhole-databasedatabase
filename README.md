@@ -1,5 +1,12 @@
 # The Bitcoin Hole
 
+* [Hardware Wallets](/item-types/hardware-wallets)
+* [Software Wallets](/item-types/software-wallets)
+* [Seed Backup Solutions](/item-types/seed-backup)
+* [Inheritance Services](/item-types/inheritance)
+* [Bitcoin Nodes](/item-types/bitcoin-nodes)
+* [Books](/item-types/books)
+
 ## Website
 
 The [thebitcoinhole.com](https://thebitcoinhole.com/) website offers a software & hardware wallets, seed backup solutions, inheritance services, nodes & books Comparison using this database.
