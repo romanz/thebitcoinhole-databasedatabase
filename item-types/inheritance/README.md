@@ -152,6 +152,7 @@ All the features supported:
 | Windows Support | windows-support | License | windows-license |
 | Windows Support | windows-support | Reproducible Builds | windows-reproducible-builds |
 | Hardware Wallets Support | hardware-wallets-support | Bitbox02 | bitbox02 |
+| Hardware Wallets Support | hardware-wallets-support | Bitkey | bitkey |
 | Hardware Wallets Support | hardware-wallets-support | Coldcard Mk4 | coldcard-mk4 |
 | Hardware Wallets Support | hardware-wallets-support | Coldcard Q | coldcard-q |
 | Hardware Wallets Support | hardware-wallets-support | Cypherock X1 | cypherock-x1 |
@@ -160,6 +161,7 @@ All the features supported:
 | Hardware Wallets Support | hardware-wallets-support | Ledger Nano S Plus | ledger-nano-s-plus |
 | Hardware Wallets Support | hardware-wallets-support | Ledger Nano X | ledger-nano-X |
 | Hardware Wallets Support | hardware-wallets-support | Passport Batch 2 | passport-batch-2 |
+| Hardware Wallets Support | hardware-wallets-support | Portal | portal |
 | Hardware Wallets Support | hardware-wallets-support | SeedSigner | seedsigner |
 | Hardware Wallets Support | hardware-wallets-support | Specter DIY | specter-diy |
 | Hardware Wallets Support | hardware-wallets-support | Tapsigner | tapsigner |

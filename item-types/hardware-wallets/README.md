@@ -160,16 +160,16 @@ All the features supported:
 | Private Keys | private-keys | Stateless | stateless |
 | Private Keys | private-keys | User Added Entropy | user-added-entropy |
 | Private Keys | private-keys | Multiple Private Keys | multiple-private-keys |
-| Private Keys | private-keys | Passphrases support | passphrase-support |
+| Private Keys | private-keys | Passphrases support (BIP39) | passphrase-support |
 | Private Keys | private-keys | Passphrase entry | passphrase-entry |
 | Private Keys | private-keys | Master Key Fingerprint | master-key-fingerprint |
 | Private Keys | private-keys | Deterministic Entropy (BIP-85) | bip85 |
 | Private Keys | private-keys | Shamir Backup (SLIP39) | shamir-backup |
 | Private Keys | private-keys | Seed XOR | seed-xor |
 | Private Keys | private-keys | Backup / recovery on microSD card | backup-recovery-microsd |
-| Private Keys | private-keys | Backup / recovery with seed phrase | backup-recovery-seedphrase |
 | Private Keys | private-keys | 12 Words BIP39 Seed Creation | create-12-words |
 | Private Keys | private-keys | 24 Words BIP39 Seed Creation | create-24-words |
+| Private Keys | private-keys | 12/24 BIP39 Words Display | display-12-24-words |
 | Private Keys | private-keys | 12 Words BIP39 Seed Import | import-12-words |
 | Private Keys | private-keys | 24 Words BIP39 Seed Import | import-24-words |
 | Private Keys | private-keys | SeedQR | seed-qr |

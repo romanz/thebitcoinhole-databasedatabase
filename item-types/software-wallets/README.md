@@ -94,7 +94,7 @@ All the features supported:
 | Networks | networks | Bitcoin Mainnet | btc-mainnet |
 | Networks | networks | Bitcoin Testnet | btc-testnet |
 | Networks | networks | Bitcoin Regtest | btc-regtest |
-| Networks | networks | Bitcoin signet | btc-signet |
+| Networks | networks | Bitcoin Signet | btc-signet |
 | Networks | networks | Lightning Network | lightning-network |
 | Currency | currency | Fiat Denominations | fiat |
 | Currency | currency | Bitcoin Unit (BTC) | btc |
@@ -132,13 +132,14 @@ All the features supported:
 | Receive Addresses | addresses | Display Multiple Addresses | display-multiple-addresses |
 | Receive Addresses | addresses | Verify Address from Text | verify-address-text |
 | Receive Addresses | addresses | Verify Address from QR | verify-address-qr |
-| Signing | signing | Multi-sig (PSBTs) | multi-sig |
-| Signing | signing | Frost | frost |
 | Signing | signing | Sign by USB | usb-data |
 | Signing | signing | Sign by NFC | nfc |
 | Signing | signing | Sign by QR | qr |
 | Signing | signing | UR2.0 Animated QRs | ur-2-animated-qrs |
 | Signing | signing | BBQr | bbqr |
+| Multi-Sig | multisig | Multi-sig (PSBTs) | multi-sig |
+| Multi-Sig | multisig | Taproot Multi-sig (MuSig2) | taproot-multi-sig |
+| Multi-Sig | multisig | Frost | frost |
 | Fees | fees | Fee Control | fee-control |
 | Fees | fees | Replace-by-fee (RBF) | replace-by-fee |
 | Fees | fees | Child-pays-for-parent (CPFP) | child-pays-for-parent |
@@ -227,22 +228,23 @@ All the features supported:
 | Start OS Support | start-os-support | Free & Open Source (FOSS) | start-os-open-source |
 | Start OS Support | start-os-support | License | start-os-license |
 | Start OS Support | start-os-support | Reproducible Builds | start-os-reproducible-builds |
-| Hardware Wallets Support | hardware-wallets-support | Jade | jade |
+| Hardware Wallets Support | hardware-wallets-support | Jade / Jade Plus | jade |
 | Hardware Wallets Support | hardware-wallets-support | Coldcard Mk4 | coldcard-mk4 |
 | Hardware Wallets Support | hardware-wallets-support | Coldcard Q | coldcard-q |
 | Hardware Wallets Support | hardware-wallets-support | BitBox02 | bitbox02-btconly |
 | Hardware Wallets Support | hardware-wallets-support | Keystone 3 Pro | keystone-3-pro |
+| Hardware Wallets Support | hardware-wallets-support | Krux | krux |
+| Hardware Wallets Support | hardware-wallets-support | Ledger Nano S Plus | ledger-nano-s-plus |
+| Hardware Wallets Support | hardware-wallets-support | Ledger Nano X | ledger-nano-x |
 | Hardware Wallets Support | hardware-wallets-support | Passport Batch 2 | passport-batch-2 |
+| Hardware Wallets Support | hardware-wallets-support | Portal | portal |
+| Hardware Wallets Support | hardware-wallets-support | SeedSigner | seedsigner |
+| Hardware Wallets Support | hardware-wallets-support | Specter DIY | specter-diy |
+| Hardware Wallets Support | hardware-wallets-support | Tapsigner | tapsigner |
 | Hardware Wallets Support | hardware-wallets-support | Trezor Model One | trezor-model-one |
 | Hardware Wallets Support | hardware-wallets-support | Trezor Model T | trezor-model-t |
 | Hardware Wallets Support | hardware-wallets-support | Trezor Safe 3 | trezor-safe-3 |
 | Hardware Wallets Support | hardware-wallets-support | Trezor Safe 5 | trezor-safe-5 |
-| Hardware Wallets Support | hardware-wallets-support | Ledger Nano S Plus | ledger-nano-s-plus |
-| Hardware Wallets Support | hardware-wallets-support | Ledger Nano X | ledger-nano-x |
-| Hardware Wallets Support | hardware-wallets-support | SeedSigner | seedsigner |
-| Hardware Wallets Support | hardware-wallets-support | Specter DIY | specter-diy |
-| Hardware Wallets Support | hardware-wallets-support | Krux | krux |
-| Hardware Wallets Support | hardware-wallets-support | Tapsigner | tapsigner |
 | Paid Services | paid-services | Assisted Self-custody | assisted-self-custody |
 | Paid Services | paid-services | Inheritance Planning | inheritance-planning |
 

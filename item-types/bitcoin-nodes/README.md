@@ -132,14 +132,17 @@ All the features supported:
 | Platforms | platforms | Rock64 | rock-64 |
 | Platforms | platforms | RockPro64 | rock-pro-64 |
 | Platforms | platforms | RockPi 4 | rockpi-4 |
-| Bitcoin Apps | bitcoin-apps | Bitcoin Node | bitcoin-node |
+| Bitcoin Apps | bitcoin-apps | Bitcoin Core | bitcoin-core |
+| Bitcoin Apps | bitcoin-apps | Bitcoin Knots | bitcoin-knots |
+| Bitcoin Apps | bitcoin-apps | Libre Relay | libre-relay |
+| Bitcoin Apps | bitcoin-apps | Electrs | electrs |
+| Bitcoin Apps | bitcoin-apps | ElectrumX | electrumx |
+| Bitcoin Apps | bitcoin-apps | Fulcrum | fulcrum |
 | Bitcoin Apps | bitcoin-apps | Lightning Node | lightning-node |
 | Bitcoin Apps | bitcoin-apps | Block Explorer | block-explorer |
 | Bitcoin Apps | bitcoin-apps | Mempool Visualizer | mempool-visualizer |
 | Bitcoin Apps | bitcoin-apps | CoinJoin | coinjoin |
 | Bitcoin Apps | bitcoin-apps | BTCPay Server | btcpay-server |
-| Bitcoin Apps | bitcoin-apps | Electrum Server | electrum-server |
-| Bitcoin Apps | bitcoin-apps | Fulcrum Server | fulcrum-server |
 | Bitcoin Apps | bitcoin-apps | Samourai Server | samourai-server |
 | Bitcoin Apps | bitcoin-apps | Specter Desktop | specter-desktop |
 | Bitcoin Apps | bitcoin-apps | Electrum Wallet | electrum-wallet |

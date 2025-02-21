@@ -113,7 +113,6 @@ All the features supported:
 | Backup Compatibility | backup-compatibility | Hexadecimal Strings | hexadecimal-strings |
 | Backup Compatibility | backup-compatibility | ASCII Strings | ascii-strings |
 
-
 ## Website
 
 The [thebitcoinhole.com](https://thebitcoinhole.com/) website offers a Seed Backup Gadgets Comparison using this database.
