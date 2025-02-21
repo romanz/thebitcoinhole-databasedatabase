@@ -70,9 +70,9 @@
   },
   "app-lock": {
     "pin-lock": {
-      "value": "NO",
-      "supported": false,
-      "flag": "negative"
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     },
     "duress-pin": {
       "value": "NO",
@@ -315,9 +315,9 @@
       "flag": "negative"
     },
     "hide-sensitive-data": {
-      "value": "NO",
-      "supported": false,
-      "flag": "negative"
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     },
     "stealth-mode": {
       "value": "NO",
