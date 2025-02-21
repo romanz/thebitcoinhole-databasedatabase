@@ -1,6 +1,7 @@
 const fs = require('fs');
 
 const itemId = process.argv[2];
+const platforms = process.argv[3];
 var jsonFile = fs.readFileSync(`../items/${itemId}.json`, 'utf8')
 const jsonData = JSON.parse(jsonFile);
 

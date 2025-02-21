@@ -114,14 +114,14 @@ jobs:
       id: fetch-variables-step
       working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
-        CHANGELOG_URL=$(node changelog-url.js ${{ inputs.item-id }})
+        CHANGELOG_URL=$(node changelog-url.js ${{ inputs.item-id }} ${{ inputs.platforms }})
         echo "CHANGELOG_URL=${CHANGELOG_URL}" >> "$GITHUB_ENV"
         echo "releaseVersion=${{ needs.fetch-release.outputs.releaseVersion }}" >> "$GITHUB_OUTPUT"
 
     - name: Update Release
       working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
-        node update-release.js ${{ inputs.item-id }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }}"
+        node update-release.js ${{ inputs.item-id }} ${{ inputs.platforms }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }}"
 
     - name: Git Diff
       run: git diff
