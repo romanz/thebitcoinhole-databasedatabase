@@ -5,7 +5,7 @@
 * [Seed Backup Solutions](/item-types/seed-backup)
 * [Inheritance Services](/item-types/inheritance)
 * [Bitcoin Nodes](/item-types/bitcoin-nodes)
-* [Books](/item-types/books)
+* [Bitcoin Books](/item-types/books)
 
 ## Website
 

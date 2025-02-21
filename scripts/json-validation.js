@@ -1,4 +1,5 @@
 const fs = require('fs');
+const path = require('path');
 const jsonlint = require('jsonlint');
 
 function validateJsonFile(filePath) {
@@ -17,7 +18,7 @@ function validateJsonFile(filePath) {
   }
 }
 
-const itemTypesDir = 'item-types';
+const itemTypesDir = '../item-types';
 
 fs.readdirSync(itemTypesDir, { withFileTypes: true }).forEach((entry) => {
   if (entry.isDirectory()) {

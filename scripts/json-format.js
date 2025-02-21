@@ -12,13 +12,19 @@ function formatJsonFile(filePath) {
   }
 }
 
-// Specify the directory where your JSON files are located
-const directoryPath = '../items';
+const itemTypesDir = '../item-types';
 
-// Get a list of all JSON files in the directory
-fs.readdirSync(directoryPath).forEach((fileName) => {
-  const filePath = path.join(directoryPath, fileName);
-  if (fileName.endsWith('.json')) {
-    formatJsonFile(filePath);
+fs.readdirSync(itemTypesDir, { withFileTypes: true }).forEach((entry) => {
+  if (entry.isDirectory()) {
+    const itemsDir = path.join(itemTypesDir, entry.name, 'items');
+
+    if (fs.existsSync(itemsDir)) {
+      fs.readdirSync(itemsDir).forEach((file) => {
+        if (file.endsWith('.json')) {
+          const filePath = path.join(itemsDir, file);
+          formatJsonFile(filePath);
+        }
+      });
+    }
   }
 });
