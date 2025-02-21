@@ -5,8 +5,8 @@ const axios = require('axios');
 const itemId = process.argv[2];
 const platforms = process.argv[3];
 const changelogUrl = process.argv[4];
-const owner = process.argv[5];
-const repo = process.argv[6];
+const githubOwner = process.argv[5];
+const githubRepo = process.argv[6];
 const gitlabProjectId = process.argv[7];
 const tag = process.argv[8];
 const latestRelease = process.argv[9];
@@ -32,11 +32,11 @@ var headers = {
   };
 var apiUrl 
 if (tag == "true") {
-    apiUrl = `https://api.github.com/repos/${owner}/${repo}/tags`;
+    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/tags`;
 } else if (latestRelease == "true") {
-    apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases/latest`;
+    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/releases/latest`;
 } else if (allReleases == "true") {
-    apiUrl = `https://api.github.com/repos/${owner}/${repo}/releases`;
+    apiUrl = `https://api.github.com/githubRepos/${githubOwner}/${githubRepo}/releases`;
 } else if (changelogUrl != "null") {
     apiUrl = changelogUrl
     headers = {}
