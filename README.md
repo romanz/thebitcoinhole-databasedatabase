@@ -11,6 +11,8 @@ This repository goal is to have the more complete database of Hardware Wallets, 
 * [Bitcoin Nodes](/item-types/bitcoin-nodes)
 * [Bitcoin Books](/item-types/books)
 
+All the info about the companies/projects owners of the any of the items, can be located at the [brands](/brands) directory.
+
 ## Website
 
 The [thebitcoinhole.com](https://thebitcoinhole.com/) website offers Hardware Wallets, Software Wallets, Bitcoin Nodes, Seed Backup Solutions, Inheritance Services & Bitcoin Books comparisons using this database.
