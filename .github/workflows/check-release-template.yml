@@ -30,7 +30,8 @@ on:
         required: false
         type: string
       platforms:
-        required: true
+        default: "null"
+        required: false
         type: string
       tag:
         required: false
