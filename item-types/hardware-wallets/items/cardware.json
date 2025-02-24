@@ -33,9 +33,9 @@
       "supported": true
     },
     "btc-on-chain": {
-      "value": "NO",
-      "flag": "negative",
-      "supported": false
+      "value": "YES (via BTCPay)",
+      "flag": "positive",
+      "supported": true
     },
     "btc-lightning": {
       "value": "NO",
@@ -43,8 +43,8 @@
       "supported": false
     },
     "alt-coins": {
-      "value": "NO",
-      "supported": false
+      "value": "YES (via WalletConnect)",
+      "supported": true
     },
     "credit-debit-card": {
       "value": "YES",
@@ -341,7 +341,8 @@
       "flag": "positive"
     },
     "master-key-fingerprint": {
-      "value": "?",
+      "value": "NO",
+      "flag": "negative",
       "supported": false
     },
     "bip85": {
@@ -370,19 +371,19 @@
       "flag": "positive"
     },
     "create-12-words": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
+    "create-24-words": {
       "value": "YES",
       "supported": true,
       "flag": "positive"
     },
-    "create-24-words": {
-      "value": "NO",
-      "supported": false,
-      "flag": "negative"
-    },
     "display-12-24-words": {
-      "value": "NO",
-      "supported": false,
-      "flag": "negative"
+      "value": "On Setup only",
+      "supported": true,
+      "flag": "neutral"
     },
     "import-12-words": {
       "value": "NO",
@@ -429,9 +430,9 @@
       "flag": "positive"
     },
     "view-address-qr": {
-      "value": "NO",
-      "supported": false,
-      "flag": "negative"
+      "value": "On App",
+      "supported": true,
+      "flag": "neutral"
     },
     "export-address-sdcard": {
       "value": "NO",
