@@ -130,9 +130,9 @@ jobs:
       uses: peter-evans/create-pull-request@v7.0.6
       id: create-pull-request
       with:
-        title: "New ${{ inputs.item-type }}/${{ inputs.item-id }} release"
-        commit-message: "New ${{ inputs.item-type }}/${{ inputs.item-id }} release"
-        branch: "${{ inputs.item-type }}/${{ inputs.item-id }}/new-release"
+        title: "New ${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }} release"
+        commit-message: "New ${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }} release"
+        branch: "${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }}/new-release"
         add-paths: "item-types/${{ inputs.item-type }}/items/*.json"
         reviewers: "${{ env.ASSIGNEE }}"
         labels: "${{ inputs.item-type }}"
