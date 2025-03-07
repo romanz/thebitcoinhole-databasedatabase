@@ -198,6 +198,10 @@
         {
           "title": "Blockstream Jade: Air-Gapped Transactions Using QR Scan",
           "url": "https://blog.blockstream.com/blockstream-jade-qr-scan/"
+        },
+        {
+          "title": "How Does QR Scan Work with Blockstream Jade?",
+          "url": "https://www.youtube.com/watch?v=J1goSxsgXMU"
         }
       ]
     },
@@ -225,6 +229,10 @@
         {
           "title": "Does Blockstream Jade have a secure element?",
           "url": "https://help.blockstream.com/hc/en-us/articles/13745404122265-Does-Blockstream-Jade-have-a-secure-element"
+        },
+        {
+          "title": "What Is a Secure Element in a Hardware Wallet?",
+          "url": "https://www.youtube.com/watch?v=ad3titeu9uY"
         }
       ]
     },
@@ -503,6 +511,10 @@
         {
           "title": "What is a SeedQR?",
           "url": "https://help.blockstream.com/hc/en-us/articles/10426338118169"
+        },
+        {
+          "title": "Setting up SeedQR with Blockstream Jade",
+          "url": "https://www.youtube.com/watch?v=Kx7fHgfUZ6w"
         }
       ]
     }
@@ -558,7 +570,17 @@
     "multi-sig": {
       "value": "YES",
       "supported": true,
-      "flag": "positive"
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Multisignature with Blockstream Jade",
+          "url": "https://www.youtube.com/watch?v=XJ5Xckqb4CI"
+        },
+        {
+          "title": "How to Save Your Multisig File to Blockstream Jade",
+          "url": "https://www.youtube.com/watch?v=8zpRMMCcetA"
+        }
+      ]
     },
     "frost": {
       "value": "NO",
@@ -622,7 +644,13 @@
     "miniscript": {
       "value": "YES",
       "supported": true,
-      "flag": "positive"
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Miniscript on Blockstream Jade",
+          "url": "https://www.youtube.com/watch?v=ARl3dMDVjTA"
+        }
+      ]
     },
     "virtual-disk-mode": {
       "value": "NO",
@@ -716,6 +744,10 @@
         {
           "title": "How do I use Jade with a Nunchuk Honey Badger wallet?",
           "url": "https://help.blockstream.com/hc/en-us/articles/14818042999449-How-do-I-use-Jade-with-a-Nunchuk-Honey-Badger-wallet-"
+        },
+        {
+          "title": "Sending Air-Gapped Transactions from Nunchuk with Blockstream Jade",
+          "url": "https://www.youtube.com/watch?v=gAnmjsLh7dM"
         }
       ]
     },
@@ -749,6 +781,10 @@
         {
           "title": "How do I use Blockstream Jade with Specter?",
           "url": "https://help.blockstream.com/hc/en-us/articles/5682411860249-How-do-I-use-Blockstream-Jade-with-Specter-"
+        },
+        {
+          "title": "How to Set Up a Jade Multisig in Specter Wallet",
+          "url": "https://www.youtube.com/watch?v=tqD3SGtzns4"
         }
       ]
     },
