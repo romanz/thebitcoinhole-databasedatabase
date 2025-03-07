@@ -43,7 +43,7 @@
       "value": "Box"
     },
     "warranty": {
-      "value": "1 year",
+      "value": "2 years",
       "flag": "positive",
       "supported": true
     },
@@ -57,7 +57,7 @@
       "value": "Intel Core i7"
     },
     "ram": {
-      "value": "32 GB"
+      "value": "32/64 GB"
     },
     "storage": {
       "value": "2/4 TB"
