@@ -222,6 +222,10 @@
         {
           "title": "Checking the tamper-evident bag",
           "url": "https://coldcard.com/docs/middle-ground/#checking-the-tamper-evident-bag"
+        },
+        {
+          "title": "Understanding CC caution lights",
+          "url": "https://www.youtube.com/watch?v=khu0Jqjisd0"
         }
       ]
     },
@@ -404,6 +408,10 @@
         {
           "title": "https://coldcard.com/docs/quick#initial-pin",
           "url": "https://coldcard.com/docs/quick#initial-pin"
+        },
+        {
+          "title": "Understanding Anti-Phishing",
+          "url": "https://www.youtube.com/watch?v=9_0bP-TOXLM"
         }
       ]
     },
@@ -482,6 +490,10 @@
         {
           "title": "BIP-39 Passphrase",
           "url": "https://coldcard.com/docs/passphrase/"
+        },
+        {
+          "title": "Tutorial: Applying a Passphrase",
+          "url": "https://www.youtube.com/watch?v=akwxazuIguk"
         }
       ]
     },
