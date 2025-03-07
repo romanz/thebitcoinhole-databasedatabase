@@ -308,7 +308,7 @@ function checkRelease(itemId, latestVersion, latestReleaseDate) {
 
             // TODO For Bluewallet, some versions are not for all the platforms. Inspect the assets to see which platform to update
 
-            platforms.split(',').forEach(platform => {
+            platforms.split('_').forEach(platform => {
                 console.log(platform + ":")
                 var currentVersion = item[`${platform}-support`][`${platform}-latest-version`].value
                 console.log("Current version found: " + currentVersion)

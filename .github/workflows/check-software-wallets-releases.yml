@@ -14,7 +14,7 @@ jobs:
       item-type: software-wallets
       github-org: AquaWallet
       github-repo: aqua-wallet
-      platforms: android,ios
+      platforms: android_ios
       latestRelease: true
   bitcoin-core:
     uses: ./.github/workflows/check-release-template.yml
@@ -23,7 +23,7 @@ jobs:
       item-type: software-wallets
       github-org: bitcoin
       github-repo: bitcoin
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   bitcoin-keeper:
     uses: ./.github/workflows/check-release-template.yml
@@ -32,7 +32,7 @@ jobs:
       item-type: software-wallets
       github-org: bithyve
       github-repo: bitcoin-keeper
-      platforms: android,ios
+      platforms: android_ios
       latestRelease: true
   bitcoin-keeper-desktop:
     uses: ./.github/workflows/check-release-template.yml
@@ -41,7 +41,7 @@ jobs:
       item-type: software-wallets
       github-org: bithyve
       github-repo: keeper-desktop
-      platforms: linux,macos,windows
+      platforms: linux_macos_windows
       latestRelease: true
   bitcoin-safektop:
     uses: ./.github/workflows/check-release-template.yml
@@ -50,7 +50,7 @@ jobs:
       item-type: software-wallets
       github-org: andreasgriffin
       github-repo: bitcoin-safe
-      platforms: linux,macos,windows
+      platforms: linux_macos_windows
       latestRelease: true
   blueWallet-android:
     uses: ./.github/workflows/check-release-template.yml
@@ -88,7 +88,7 @@ jobs:
       item-id: electrum
       item-type: software-wallets
       changelog-url: https://raw.githubusercontent.com/spesmilo/electrum/master/RELEASE-NOTES
-      platforms: windows,macos,linux,android
+      platforms: windows_macos_linux_android
   envoy:
     uses: ./.github/workflows/check-release-template.yml
     with:
@@ -96,7 +96,7 @@ jobs:
       item-type: software-wallets
       github-org: Foundation-Devices
       github-repo: envoy
-      platforms: android,ios
+      platforms: android_ios
       latestRelease: true
   green-desktop:
     uses: ./.github/workflows/check-release-template.yml
@@ -105,7 +105,7 @@ jobs:
       item-type: software-wallets
       github-org: Blockstream
       github-repo: green_qt
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   green-android:
     uses: ./.github/workflows/check-release-template.yml
@@ -132,7 +132,7 @@ jobs:
       item-type: software-wallets
       github-org: wizardsardine
       github-repo: liana
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   muun-android:
     uses: ./.github/workflows/check-release-template.yml
@@ -157,7 +157,7 @@ jobs:
       item-type: software-wallets
       github-org: mycitadel
       github-repo: mycitadel-desktop
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   my-citadel-ios:
     uses: ./.github/workflows/check-release-template.yml
@@ -184,7 +184,7 @@ jobs:
       item-type: software-wallets
       github-org: nunchuk-io
       github-repo: nunchuk-desktop
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   phoenix:
     uses: ./.github/workflows/check-release-template.yml
@@ -193,7 +193,7 @@ jobs:
       item-type: software-wallets
       github-org: ACINQ
       github-repo: phoenix
-      platforms: android,ios
+      platforms: android_ios
       latestRelease: true
   proton-wallet:
     uses: ./.github/workflows/check-release-template.yml
@@ -220,7 +220,7 @@ jobs:
       item-type: software-wallets
       github-org: sparrowwallet
       github-repo: sparrow
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   specter:
     uses: ./.github/workflows/check-release-template.yml
@@ -229,7 +229,7 @@ jobs:
       item-type: software-wallets
       github-org: cryptoadvance
       github-repo: specter-desktop
-      platforms: windows,macos,linux,umbrel-os
+      platforms: windows_macos_linux_umbrel-os
       latestRelease: true
   specter-start-os:
     uses: ./.github/workflows/check-release-template.yml
@@ -247,7 +247,7 @@ jobs:
       item-type: software-wallets
       github-org: cypherstack
       github-repo: stack_wallet
-      platforms: android,ios,windows,macos,linux
+      platforms: android_ios_windows_macos_linux
       allReleases: true
       allReleasesInclude: "Stack Wallet"
   wasabi:
@@ -257,7 +257,7 @@ jobs:
       item-type: software-wallets
       github-org: zkSNACKs
       github-repo: WalletWasabi
-      platforms: windows,macos,linux
+      platforms: windows_macos_linux
       latestRelease: true
   zeus:
     uses: ./.github/workflows/check-release-template.yml
@@ -266,5 +266,5 @@ jobs:
       item-type: software-wallets
       github-org: ZeusLN
       github-repo: zeus
-      platforms: android,ios
+      platforms: android_ios
       latestRelease: true
