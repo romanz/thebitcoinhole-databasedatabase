@@ -108,7 +108,13 @@
   },
   "input": {
     "controls": {
-      "value": "Buttons"
+      "value": "Buttons",
+      "links": [
+        {
+          "title": "Navigate your Cardware Device",
+          "url": "https://www.youtube.com/watch?v=ZQI1zbwh7cM"
+        }
+      ]
     },
     "qwerty-keyboard": {
       "value": "NO",
@@ -282,6 +288,12 @@
       "flag": "positive",
       "texts": [
         "You have 5 attempts to enter your PIN correctly when prompted. Entering it incorrectly 5 times will erase the device."
+      ],
+      "links": [
+        {
+          "title": "Erasing Device",
+          "url": "https://www.youtube.com/watch?v=JYwMWRw99fI"
+        }
       ]
     },
     "brick-reset-pin": {
@@ -324,6 +336,12 @@
       "flag": "positive",
       "texts": [
         "During setup, users generate their private keys with robust entropy via dice rolls (with a D20 die included in every box) or through video streaming, ensuring truly random key creation."
+      ],
+      "links": [
+        {
+          "title": "Generating Entropy with a D20 Dice",
+          "url": "https://www.youtube.com/watch?v=IVTedW3qlHg"
+        }
       ]
     },
     "multiple-private-keys": {
@@ -393,7 +411,13 @@
     "import-24-words": {
       "value": "YES",
       "supported": true,
-      "flag": "positive"
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Restoring/Importing Seed Phrase",
+          "url": "https://www.youtube.com/watch?v=qMxdRqGduHQ"
+        }
+      ]
     },
     "seed-qr": {
       "value": "NO",
