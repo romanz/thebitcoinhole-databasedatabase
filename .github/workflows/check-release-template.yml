@@ -121,7 +121,7 @@ jobs:
     - name: Update Release
       working-directory: item-types/${{ inputs.item-type }}/scripts
       run: |
-        node update-release.js ${{ inputs.item-id }} ${{ inputs.platforms }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }}"
+        node update-release.js ${{ inputs.item-id }} ${{ inputs.platforms }} ${{ needs.fetch-release.outputs.releaseVersion }} "${{ needs.fetch-release.outputs.releaseDate }} ${{ env.CHANGELOG_URL }}"
 
     - name: Git Diff
       run: git diff
@@ -133,7 +133,7 @@ jobs:
         title: "New ${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }} release"
         commit-message: "New ${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }} release"
         branch: "${{ inputs.item-type }}/${{ inputs.item-id }}/${{ inputs.platforms }}/new-release"
-        add-paths: "item-types/${{ inputs.item-type }}/items/*.json"
+        add-paths: "item-types/${{ inputs.item-type }}/items/*.json,releases.md"
         reviewers: "${{ env.ASSIGNEE }}"
         labels: "${{ inputs.item-type }}"
         body: ${{ env.CHANGELOG_URL }}

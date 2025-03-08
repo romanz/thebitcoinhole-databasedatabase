@@ -1,10 +1,13 @@
 require('dotenv').config();
 const fs = require('fs');
 
+eval(fs.readFileSync('../../scripts/release-utils.js', 'utf-8'));
+
 const itemId = process.argv[2];
 const platforms = process.argv[3];
 const releaseVersion = process.argv[4];
 const releaseDate = process.argv[5];
+const changelogUrl = process.argv[6];
 
 if (releaseVersion == undefined || releaseVersion == "") {
     console.error('Missing releaseVersion');
@@ -61,6 +64,8 @@ fs.readFile(filePath, 'utf8', (err, data) => {
                         console.log('JSON file updated successfully.');
                     }
                 });
+
+                updateReleasesFile("Software Wallets", itemId, releaseDate, releaseVersion, changelogUrl);
             } else {
                 console.error('Error updating JSON. Both versions are the same');
                 process.exit(1);
