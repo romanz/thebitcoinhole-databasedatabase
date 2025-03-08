@@ -323,14 +323,14 @@ function formatMonthDDYYYY(inputDate) {
 
     if (parts && parts.length === 4) {
         const year = parseInt(parts[3]);
-        const monthIndex = longMonths.indexOf(parts[1]);
+        const monthIndex = getLongMonthIndex(parts[1]);
         const day = parseInt(parts[2]);
 
         // Create a JavaScript Date object
         const date = new Date(year, monthIndex, day);
 
         // Format the date in the desired output format (e.g., "Dec 22, 2023")
-        return `${shortMonths[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+        return `${getShortMonth(date)} ${date.getDate()}, ${date.getFullYear()}`;
     }
 
     // Return the original input if parsing fails
@@ -351,7 +351,7 @@ function formatYYYYMMDD(inputDate) {
         const date = new Date(year, monthIndex, day);
 
         // Format the date in the desired output format (e.g., "Dec 22, 2023")
-        return `${shortMonths[date.getMonth()]} ${date.getDate()}, ${date.getFullYear()}`;
+        return `${getShortMonth(date)} ${date.getDate()}, ${date.getFullYear()}`;
     }
 
     // Return the original input if parsing fails

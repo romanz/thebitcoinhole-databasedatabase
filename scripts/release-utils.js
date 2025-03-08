@@ -7,6 +7,18 @@ const shortMonths = [
     "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
 ];
 
+function getShortMonthByIndex(index) {
+    return shortMonths[index]
+}
+
+function getShortMonth(date) {
+    return shortMonths[date.getMonth()]
+}
+
+function getLongMonthIndex(month) {
+    return longMonths.indexOf(month)
+}
+
 function isValidVersion(str) {
     const regex = /^v\d+(\.\d+)*$/;
     return regex.test(str);

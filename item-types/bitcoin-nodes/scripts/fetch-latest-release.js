@@ -135,7 +135,7 @@ axios
                 regex = /^- Released ([\d.]+)\/([\d.]+)\/([\d.]+)/;
                 if (match) {
                     match = line.match(regex);
-                    latestReleaseDate = `${shortMonths[parseInt(match[1]) - 1]} ${match[2]}, ${2000 + parseInt(match[3])}`;
+                    latestReleaseDate = `${getShortMonthByIndex(parseInt(match[1]) - 1)} ${match[2]}, ${2000 + parseInt(match[3])}`;
                 }
             }
         } else if (itemId.startsWith("nodl-")) {
