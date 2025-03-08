@@ -2,7 +2,7 @@ require('dotenv').config();
 const fs = require('fs');
 const axios = require('axios');
 
-eval(fs.readFileSync('../../scripts/release-utils.js', 'utf-8'));
+eval(fs.readFileSync('../../../scripts/release-utils.js', 'utf-8'));
 
 const itemId = process.argv[2];
 const platforms = process.argv[3];
