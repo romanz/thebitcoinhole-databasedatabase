@@ -10,6 +10,11 @@ if (releaseVersion == undefined || releaseVersion == "") {
     console.error('Missing releaseVersion');
     process.exit(1);
 }
+
+if (releaseDate == undefined || releaseDate == "") {
+    console.error('Missing releaseDate');
+    process.exit(1);
+}
    
 // Define the path to your JSON file.
 const filePath = `../items/${itemId}.json`;
@@ -56,7 +61,7 @@ fs.readFile(filePath, 'utf8', (err, data) => {
                         console.log('JSON file updated successfully.');
                     }
                 });
-            }else {
+            } else {
                 console.error('Error updating JSON. Both versions are the same');
                 process.exit(1);
             }

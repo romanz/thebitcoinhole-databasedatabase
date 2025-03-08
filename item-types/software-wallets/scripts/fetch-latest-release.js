@@ -2,6 +2,8 @@ require('dotenv').config();
 const fs = require('fs');
 const axios = require('axios');
 
+eval(fs.readFileSync('../../scripts/relese-utils.js', 'utf-8'));
+
 const itemId = process.argv[2];
 const platforms = process.argv[3];
 const changelogUrl = process.argv[4];
@@ -16,15 +18,6 @@ const allReleasesExclude = process.argv[12];
 const assetsMatch = process.argv[13];
 
 const githubApiKey = process.env.GITHUB_TOKEN
-
-const longMonths = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-
-const shortMonths = [
-    "Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
-];
 
 var headers = {
     Accept: 'application/vnd.github.v3+json',
@@ -248,16 +241,6 @@ axios
     console.error('Error fetching release information:', error.message);
     process.exit(1);
   });
-
-function isValidVersion(str) {
-    const regex = /^v\d+(\.\d+)*$/;
-    return regex.test(str);
-}
-
-function isValidDate(str) {
-    const regex = /^(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [1-9]|[1-2][0-9]|3[01], \d{4}$/;
-    return regex.test(str);
-}
 
 function getDate(publishedAt) {
     if (publishedAt != "") {
