@@ -39,9 +39,17 @@ jobs:
         add-paths: "item-types/*/items/*.json,releases.md"
         reviewers: "${{ env.ASSIGNEE }}"
 
-    - name: Trigger Automerge Workflow
-      run: |
-        curl -X POST -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
-        -H "Accept: application/vnd.github.v3+json" \
-        https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
-        -d '{"ref":"new-releases"}'
+    - name: Enable Pull Request Automerge
+      if: steps.create-pull-request.outputs.pull-request-operation == 'created'
+      uses: peter-evans/enable-pull-request-automerge@v3
+      with:
+        token: ${{ env.GITHUB_TOKEN }}
+        pull-request-number: ${{ steps.create-pull-request.outputs.pull-request-number }}
+        merge-method: squash
+
+    # - name: Trigger Automerge Workflow
+    #   run: |
+    #     curl -X POST -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+    #     -H "Accept: application/vnd.github.v3+json" \
+    #     https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
+    #     -d '{"ref":"new-releases"}'
