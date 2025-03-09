@@ -29,9 +29,6 @@ jobs:
       working-directory: scripts
       run: node update-releases.js
 
-    - name: Git Diff
-      run: git diff
-
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7.0.6
       id: create-pull-request
@@ -42,3 +39,9 @@ jobs:
         add-paths: "item-types/*/items/*.json,releases.md"
         reviewers: "${{ env.ASSIGNEE }}"
 
+    - name: Trigger Automerge Workflow
+      run: |
+        curl -X POST -H "Authorization: Bearer ${{ secrets.ACCESS_TOKEN }}" \
+        -H "Accept: application/vnd.github.v3+json" \
+        https://api.github.com/repos/${{ github.repository }}/actions/workflows/build.yml/dispatches \
+        -d '{"ref":"new-releases"}'

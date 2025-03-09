@@ -1,0 +1,46 @@
+name: Pull Request
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '.idea/**'
+      - '.gitignore'
+      - 'README.md'
+  pull_request:
+  workflow_dispatch:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14
+
+    - name: Install dependencies
+      run: npm install
+      working-directory: scripts
+
+    - name: Run JSON Validation Script
+      run: node json-validation.js
+      working-directory: scripts
+
+  auto-merge:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref_name == 'new-releases'
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Auto-merge
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_URL: ${{ github.event.pull_request.html_url }}
+        run: gh pr merge --squash "$PR_URL"
