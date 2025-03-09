@@ -6,7 +6,7 @@ on:
     - cron: "0 3,9,15,21 * * *"  # Runs every six hours
 
 jobs:
-  fetch-releases:
+  update-releases:
     runs-on: ubuntu-latest
     env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -28,13 +28,6 @@ jobs:
       id: fetch-release-step
       working-directory: scripts
       run: node update-releases.js
-
-  commit-releases:
-    runs-on: ubuntu-latest
-    needs: fetch-releases
-    env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    steps:
 
     - name: Git Diff
       run: git diff
