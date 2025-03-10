@@ -4,6 +4,8 @@ const axios = require('axios');
 const util = require('util');
 const path = require('path');
 
+eval(fs.readFileSync('./tweet.js', 'utf-8'));
+
 const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 
 const sleep = util.promisify(setTimeout);
@@ -580,12 +582,17 @@ function updateRelease(itemType, json, releaseVersion, releaseDate) {
                     }
                 });
     
+                var newRelease
                 if (json.platforms != undefined) {
                     json.platforms.forEach(platform => {
-                        updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, platform);
+                        newRelease = updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, platform);
                     });
                 } else {
-                    updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, "");
+                    newRelease = updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, "");
+                }
+
+                if (newRelease) {
+                    tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, brandId, json.platforms)
                 }
     
             } else {
@@ -645,6 +652,10 @@ function updateReleasesFile(itemType, itemId, date, version, changelogUrl, platf
     const versionString = platform !== "" ? `${version} (${platform})` : version;
     const newEntry = `- ${date} - ${versionString} - ${changelogUrl}`;
 
+    if (content.includes(newEntry)) {
+        return false
+    }
+
     // If the type doesn't exist, add the full structure
     if (!content.includes(typeHeader)) {
         content += `\n${typeHeader}\n${idHeader}\n${newEntry}\n`;
@@ -670,6 +681,47 @@ function updateReleasesFile(itemType, itemId, date, version, changelogUrl, platf
 
     fs.writeFileSync(filePath, content.trim() + "\n", 'utf8');
     console.log(`Updated ${fileName} with new entry.`);
+    return true
+}
+
+function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, brandId, platforms) {
+    console.log("-------------------")
+    console.log("Release to tweet")
+    console.log("Item Type: " + itemType)
+    console.log("Item Id: " + itemId)
+    console.log("Item Name: " + itemName)
+    console.log("Version: " + version)
+    console.log("Changelog Url: " + changelogUrl)
+    console.log("Platforms: " + platforms)
+
+
+    if (itemName == undefined) {
+        console.error("itemName is undefined")
+        exit(1)
+    }
+
+    if (version == undefined) {
+        console.error("version is undefined")
+        exit(1)
+    }
+
+    let text = `${itemName}`;
+    if (platforms) {
+        text += ` (${platforms})`;
+    }
+    text += ` v${version} released.\n\n`;
+    if (changelogUrl) {
+        text += `- Release notes: ${changelogUrl}\n\n`;
+    }
+
+    var brand = readJSONFile(`../brands/${brandId}.json`)
+    if (brand?.twitter?.value) {
+        text += `${brand.twitter.value}`;
+    }
+
+    console.log("Tweet to post: " + text)
+    //postTweet(text);
+    console.log("-------------------")
 }
 
 function getDate(publishedAt) {
