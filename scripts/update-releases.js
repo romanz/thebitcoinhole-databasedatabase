@@ -580,9 +580,13 @@ function updateRelease(itemType, json, releaseVersion, releaseDate) {
                     }
                 });
     
-                json.platforms.forEach(platform => {
-                    updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, platform);
-                });
+                if (json.platforms != undefined) {
+                    json.platforms.forEach(platform => {
+                        updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, platform);
+                    });
+                } else {
+                    updateReleasesFile(itemType, json["item-id"], releaseDate, releaseVersion, changelogUrl, "");
+                }
     
             } else {
                 console.error('Error updating JSON. Both versions are the same');
