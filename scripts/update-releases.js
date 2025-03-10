@@ -642,32 +642,35 @@ function updateReleasesFile(itemType, itemId, date, version, changelogUrl, platf
 
     const typeHeader = `## ${itemType}`;
     const idHeader = `### ${itemId}`;
-    const versionString = platform != "" ? `${version} (${platform})` : version;
+    const versionString = platform !== "" ? `${version} (${platform})` : version;
     const newEntry = `- ${date} - ${versionString} - ${changelogUrl}`;
 
-    if (content.includes(typeHeader)) {
-        const typeIndex = content.indexOf(typeHeader) + typeHeader.length;
-        const idIndex = content.indexOf(idHeader, typeIndex);
-
-        if (idIndex !== -1) {
-            // Append new entry under the existing item ID
-            const splitContent = content.split(idHeader);
-            splitContent[1] = splitContent[1].trim() + `\n${newEntry}\n`;
-            content = splitContent.join(idHeader + "\n");
-        } else {
-            // Append new item ID under existing type
-            content = content.replace(typeHeader, `${typeHeader}\n${idHeader}\n${newEntry}\n`);
-        }
-    } else {
-        // Append new item type, item ID, and entry
+    // If the type doesn't exist, add the full structure
+    if (!content.includes(typeHeader)) {
         content += `\n${typeHeader}\n${idHeader}\n${newEntry}\n`;
+    } else {
+        // Type exists, check if the ID exists within that type
+        const typeSectionRegex = new RegExp(`(${typeHeader}[\\s\\S]*?)(?=\\n## |$)`, 'g');
+        content = content.replace(typeSectionRegex, (typeSection) => {
+            if (typeSection.includes(idHeader)) {
+                // ID exists, append the new entry if it's not already present
+                const idSectionRegex = new RegExp(`(${idHeader}\\n)([\\s\\S]*?)(?=\\n### |\\n## |$)`);
+                return typeSection.replace(idSectionRegex, (match, header, entries) => {
+                    if (!entries.includes(newEntry)) {
+                        return `${header}${entries.trim()}\n${newEntry}\n`;
+                    }
+                    return match;
+                });
+            } else {
+                // ID does not exist, add it to the type section
+                return `${typeSection.trim()}\n${idHeader}\n${newEntry}\n`;
+            }
+        });
     }
 
-    fs.writeFileSync(filePath, content, 'utf8');
+    fs.writeFileSync(filePath, content.trim() + "\n", 'utf8');
     console.log(`Updated ${fileName} with new entry.`);
 }
-
-
 
 function getDate(publishedAt) {
     if (publishedAt != "") {
