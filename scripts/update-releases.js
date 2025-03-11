@@ -825,3 +825,13 @@ function formatYYYYMMDD(inputDate) {
     // Return the original input if parsing fails
     return inputDate;
 }
+
+function readJSONFile(filePath) {
+    try {
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        return JSON.parse(fileContent);
+    } catch (error) {
+        console.error(`Error reading JSON file at ${filePath}:`, error);
+        exit(1)
+    }
+}
