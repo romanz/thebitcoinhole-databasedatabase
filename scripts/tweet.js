@@ -13,14 +13,66 @@ const client = new TwitterApi({
   accessSecret: process.env.TWITTER_ACCESS_SECRET,
 });
 
-async function postTweet(tweetText) {
-  try {
-    const tweet = await client.v2.tweet({
-      text: tweetText
-    });
-    console.log('Tweet posted:', tweet);
-  } catch (error) {
-    console.error('Error posting tweet:', error);
-    exit(1)
+async function postTweetWithImage(tweetText, imagePath = null) {
+  if (twitterEnabled == true) {
+    try {
+  
+      if (imagePath != null) {
+        const mediaData = await client.v1.uploadMedia(imagePath);
+        const tweet = await client.v2.tweet({
+          text: tweetText,
+          media: { media_ids: [mediaData] },
+        });
+        console.log('Tweet posted:', tweet);
+      } else {
+        tweet = await client.v2.tweet({
+          text: tweetText
+        });
+        console.log('Tweet posted:', tweet);
+      }
+    } catch (error) {
+      console.error('Error posting tweet:', error);
+      exit(1)
+    } finally {
+      charsCount = 0
+      text = ""
+      imagePath = null
+    }
   }
+}
+
+const MAX_TWEET_CHARS = 280
+
+let charsCount = 0
+let text = ""
+let imagePath = null
+let twitterEnabled
+
+function setTwitterEnabled(twitterEnabledFlag) {
+  twitterEnabled = twitterEnabledFlag
+}
+
+function appendImageToTweet(imagePathToAppend) {
+  imagePath = imagePathToAppend
+  charsCount += 23
+  console.log("Image to post: " + imagePath)
+}
+
+function appendTextToTweet(textToAppend, url = null) {
+  if (url == null && charsCount + textToAppend.length <= MAX_TWEET_CHARS) {
+      charsCount += textToAppend.length
+      text += textToAppend
+  } else if (url != null && charsCount + textToAppend.length + 23 <= MAX_TWEET_CHARS) {
+      charsCount += textToAppend.length + 23
+      text += textToAppend + url
+  }
+}
+
+async function postTweet() {
+  console.log("Twitter Enabled: " + twitterEnabled)
+  console.log("Tweet to post: " + charsCount + `/${MAX_TWEET_CHARS} chars`)
+  console.log("====================")
+  console.log(text)
+  console.log("====================")
+  postTweetWithImage(text, imagePath)
 }

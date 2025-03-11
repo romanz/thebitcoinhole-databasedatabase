@@ -4,9 +4,8 @@ const axios = require('axios');
 const util = require('util');
 const path = require('path');
 
-const twitterEnabled = process.argv[2] === 'true' ? true : false;
-
 eval(fs.readFileSync('./tweet.js', 'utf-8'));
+setTwitterEnabled(process.argv[2] === 'true' ? true : false)
 
 const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 
@@ -696,7 +695,6 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
     console.log("Changelog Url: " + changelogUrl)
     console.log("Platforms: " + platforms)
 
-
     if (itemName == undefined) {
         console.error("itemName is undefined")
         exit(1)
@@ -707,26 +705,19 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
         exit(1)
     }
 
-    let text = `${itemName}`;
+    appendTextToTweet(`${itemName}`)
     if (platforms) {
-        text += ` (${platforms})`;
+        appendTextToTweet(` (${platforms})`)
     }
     var brand = readJSONFile(`../brands/${brandId}.json`)
     if (brand?.twitter?.value) {
-        text += ` bt ${brand.twitter.value}`;
+        appendTextToTweet(` bt ${brand.twitter.value}`)
     }
-    text += ` ${version} released.\n\n`;
+    appendTextToTweet(` ${version} released.\n\n`)
     if (changelogUrl) {
-        text += `- Release notes: ${changelogUrl}\n\n`;
+        appendTextToTweet(`- Release notes: ${changelogUrl}\n\n`)
     }
-
-    console.log("Tweet to post:")
-    console.log("====================")
-    console.log(text)
-    console.log("====================")
-    if (twitterEnabled == true) {
-        postTweet(text);
-    }
+    postTweet();
     console.log("-------------------")
 }
 
