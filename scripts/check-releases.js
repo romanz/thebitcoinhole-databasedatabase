@@ -711,7 +711,7 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
     }
     var brand = readJSONFile(`../brands/${brandId}.json`)
     if (brand?.twitter?.value) {
-        appendTextToTweet(` bt ${brand.twitter.value}`)
+        appendTextToTweet(` by ${brand.twitter.value}`)
     }
     appendTextToTweet(` ${version} released.\n\n`)
     if (changelogUrl) {

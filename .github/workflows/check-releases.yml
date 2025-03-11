@@ -31,7 +31,7 @@ jobs:
     - name: Update release
       id: fetch-release-step
       working-directory: scripts
-      run: node check-releases.js false
+      run: node check-releases.js true
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7.0.6
