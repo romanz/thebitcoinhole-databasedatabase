@@ -592,7 +592,7 @@ function updateRelease(itemType, json, releaseVersion, releaseDate) {
                 }
 
                 if (newRelease) {
-                    tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, brandId, json.platforms)
+                    tweetNewRelease(itemType, json["item-id"], item.name, version, changelogUrl, brandId, json.platforms)
                 }
     
             } else {
