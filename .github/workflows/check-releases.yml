@@ -1,4 +1,4 @@
-name: Update Releases
+name: Check Releases
 
 on:
   workflow_dispatch:
@@ -6,7 +6,7 @@ on:
     - cron: "0 3,9,15,21 * * *"  # Runs every six hours
 
 jobs:
-  update-releases:
+  check-releases:
     runs-on: ubuntu-latest
     env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -31,7 +31,7 @@ jobs:
     - name: Update release
       id: fetch-release-step
       working-directory: scripts
-      run: node update-releases.js
+      run: node check-releases.js false
 
     - name: Create Pull Request
       uses: peter-evans/create-pull-request@v7.0.6

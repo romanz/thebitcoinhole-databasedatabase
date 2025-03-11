@@ -4,6 +4,8 @@ const axios = require('axios');
 const util = require('util');
 const path = require('path');
 
+const twitterEnabled = process.argv[2] === 'true' ? true : false;
+
 eval(fs.readFileSync('./tweet.js', 'utf-8'));
 
 const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
@@ -709,18 +711,22 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
     if (platforms) {
         text += ` (${platforms})`;
     }
-    text += ` v${version} released.\n\n`;
+    var brand = readJSONFile(`../brands/${brandId}.json`)
+    if (brand?.twitter?.value) {
+        text += ` bt ${brand.twitter.value}`;
+    }
+    text += ` ${version} released.\n\n`;
     if (changelogUrl) {
         text += `- Release notes: ${changelogUrl}\n\n`;
     }
 
-    var brand = readJSONFile(`../brands/${brandId}.json`)
-    if (brand?.twitter?.value) {
-        text += `${brand.twitter.value}`;
+    console.log("Tweet to post:")
+    console.log("====================")
+    console.log(text)
+    console.log("====================")
+    if (twitterEnabled == true) {
+        postTweet(text);
     }
-
-    console.log("Tweet to post: " + text)
-    //postTweet(text);
     console.log("-------------------")
 }
 
