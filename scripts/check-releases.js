@@ -715,7 +715,7 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
     }
     appendTextToTweet(` ${version} released.\n\n`)
     if (changelogUrl) {
-        appendTextToTweet(`- Release notes: ${changelogUrl}\n\n`)
+        appendTextToTweet(`Release notes: ${changelogUrl}\n\n`)
     }
     postTweet();
     console.log("-------------------")
