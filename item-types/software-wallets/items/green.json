@@ -277,6 +277,17 @@
       "value": "NO",
       "supported": false,
       "flag": "negative"
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "How can I sign or authenticate a message, using an address of my wallet?",
+          "url": "https://help.blockstream.com/hc/en-us/articles/26127251627545-How-can-I-sign-or-authenticate-a-message-using-an-address-of-my-wallet"
+        }
+      ]
     }
   },
   "multisig": {

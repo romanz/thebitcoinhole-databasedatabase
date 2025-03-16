@@ -615,6 +615,21 @@
     "nfc-push-tx": {
       "value": "NO",
       "supported": false
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Signing a message with Sparrow Wallet",
+          "url": "https://support.bitbox.swiss/sparrow-wallet/signing-a-message-with-sparrow-wallet"
+        },
+        {
+          "title": "How can I sign messages via Electrum with my BitBox02?",
+          "url": "https://support.bitbox.swiss/how-can-i-sign-messages-via-electrum-with-my-bitbox02"
+        }
+      ]
     }
   },
   "fees": {

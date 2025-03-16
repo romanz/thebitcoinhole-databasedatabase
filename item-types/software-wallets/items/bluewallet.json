@@ -271,6 +271,11 @@
       "value": "NO",
       "supported": false,
       "flag": "negative"
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     }
   },
   "multisig": {

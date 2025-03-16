@@ -687,6 +687,11 @@
           "url": "https://www.youtube.com/watch?v=Tte7nddBUCI"
         }
       ]
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     }
   },
   "fees": {

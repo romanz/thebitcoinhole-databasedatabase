@@ -581,6 +581,17 @@
     "nfc-push-tx": {
       "value": "NO",
       "supported": false
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Sign & Verify",
+          "url": "https://trezor.io/learn/a/sign-verify"
+        }
+      ]
     }
   },
   "fees": {

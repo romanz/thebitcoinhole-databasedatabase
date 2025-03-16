@@ -694,6 +694,11 @@
           "url": "https://blog.coinkite.com/nfc-pushtx-released/"
         }
       ]
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     }
   },
   "fees": {

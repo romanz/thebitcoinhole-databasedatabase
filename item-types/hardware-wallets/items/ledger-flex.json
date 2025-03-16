@@ -481,6 +481,11 @@
     "nfc-push-tx": {
       "value": "NO",
       "supported": false
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     }
   },
   "fees": {

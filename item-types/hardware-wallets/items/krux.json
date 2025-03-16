@@ -541,6 +541,14 @@
     "nfc-push-tx": {
       "value": "NO",
       "supported": false
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "texts": [
+        "Sign messages from Sparrow and Specter, via QR code, also attesting a Bitcoin address belongs to you."
+      ]
     }
   },
   "fees": {

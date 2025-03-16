@@ -267,6 +267,11 @@
       "value": "YES",
       "supported": true,
       "flag": "positive"
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
     }
   },
   "multisig": {

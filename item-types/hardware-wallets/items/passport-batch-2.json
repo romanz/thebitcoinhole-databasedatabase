@@ -598,6 +598,17 @@
     "nfc-push-tx": {
       "value": "NO",
       "supported": false
+    },
+    "message-signing": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Sign a Message",
+          "url": "https://docs.foundation.xyz/passport/passport-menu/account/#sign-a-message"
+        }
+      ]
     }
   },
   "fees": {
