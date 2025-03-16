@@ -501,7 +501,7 @@ function checkRelease(itemType, json, latestVersion, latestReleaseDate) {
             if (releaseVersion != undefined) {
                 updateRelease(itemType, json, releaseVersion, releaseDate)
             } else {
-                console.log("Not new release found")
+                console.log("New release not found")
             }
             console.log('---------------------');
 
@@ -718,6 +718,12 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
     if (brand?.twitter?.value) {
         appendTextToTweet(` by ${brand.twitter.value}`)
     }
+
+    if (brand?.nostr?.url) {
+        appendTextToNostr(` by #[0]`)
+        appendNostrPublicKeyTag(brand?.nostr?.url.split('/').pop())
+    }
+
     appendTextToTweet(` ${version} released.\n\n`)
     appendTextToNostr(` ${version} released.\n\n`)
     if (changelogUrl) {

@@ -6,9 +6,14 @@ dotenv.config();
 
 let nostrEnabled
 let text = ""
+let tags = []
 
 function setNostrEnabled(nostrEnabledFlag) {
     nostrEnabled = nostrEnabledFlag
+}
+
+function appendNostrPublicKeyTag(publicKey) {
+    tags.push(['p', NostrTools.nip19.decode(publicKey.toLowerCase()).data])
 }
 
 function appendTextToNostr(textToAppend, url = null) {
@@ -33,7 +38,7 @@ function postOnNostr(content) {
     kind: 1, // Kind 1 is a text note
     pubkey: pubKey,
     created_at: Math.floor(Date.now() / 1000), // Unix timestamp in seconds
-    tags: [], // Array of references to other events ('e'), pubkeys ('p') or addressable content ('a')
+    tags: tags, // Array of references to other events ('e'), pubkeys ('p') or addressable content ('a')
     content, // Your message content, defined in Step 2
   };
 
@@ -93,5 +98,7 @@ function postNostr() {
     console.log("====================")
     console.log(text)
     console.log("====================")
-    postOnNostr(text)
+    if (nostrEnabled == true) {
+        postOnNostr(text)
+    }
   }
