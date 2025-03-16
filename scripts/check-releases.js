@@ -5,7 +5,10 @@ const util = require('util');
 const path = require('path');
 
 eval(fs.readFileSync('./tweet.js', 'utf-8'));
+eval(fs.readFileSync('./nostr.js', 'utf-8'));
+
 setTwitterEnabled(process.argv[2] === 'true' ? true : false)
+setNostrEnabled(process.argv[3] === 'true' ? true : false)
 
 const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
 
@@ -593,7 +596,7 @@ function updateRelease(itemType, json, releaseVersion, releaseDate) {
                 }
 
                 if (newRelease) {
-                    tweetNewRelease(itemType, json["item-id"], item.name, releaseVersion, changelogUrl, item.company, json.platforms)
+                    postNewRelease(itemType, json["item-id"], item.name, releaseVersion, changelogUrl, item.company, json.platforms)
                 }
     
             } else {
@@ -685,9 +688,9 @@ function updateReleasesFile(itemType, itemId, date, version, changelogUrl, platf
     return true
 }
 
-function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, brandId, platforms) {
+function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brandId, platforms) {
     console.log("-------------------")
-    console.log("Release to tweet")
+    console.log("Release to post")
     console.log("Item Type: " + itemType)
     console.log("Item Id: " + itemId)
     console.log("Item Name: " + itemName)
@@ -706,18 +709,23 @@ function tweetNewRelease(itemType, itemId, itemName, version, changelogUrl, bran
     }
 
     appendTextToTweet(`${itemName}`)
+    appendTextToNostr(`${itemName}`)
     if (platforms) {
         appendTextToTweet(` (${platforms})`)
+        appendTextToNostr(` (${platforms})`)
     }
     var brand = readJSONFile(`../brands/${brandId}.json`)
     if (brand?.twitter?.value) {
         appendTextToTweet(` by ${brand.twitter.value}`)
     }
     appendTextToTweet(` ${version} released.\n\n`)
+    appendTextToNostr(` ${version} released.\n\n`)
     if (changelogUrl) {
-        appendTextToTweet(`Release notes: ${changelogUrl}\n\n`)
+        appendTextToTweet(`Release notes: ${changelogUrl}`)
+        appendTextToNostr(`Release notes: ${changelogUrl}`)
     }
     postTweet();
+    postNostr();
     console.log("-------------------")
 }
 
