@@ -584,9 +584,9 @@
   },
   "other-features": {
     "miniscript": {
-      "value": "SOON",
+      "value": "YES",
       "supported": true,
-      "flag": "neutral"
+      "flag": "positive"
     },
     "virtual-disk-mode": {
       "value": "NO",

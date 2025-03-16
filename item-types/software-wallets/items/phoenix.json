@@ -384,9 +384,9 @@
       "flag": "negative"
     },
     "tor": {
-      "value": "YES",
+      "value": "Third-Party app required",
       "supported": true,
-      "flag": "positive"
+      "flag": "neutral"
     }
   },
   "other-features": {

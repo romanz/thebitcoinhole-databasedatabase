@@ -276,7 +276,7 @@
       "links": [
         {
           "title": "Release Notes",
-          "url": "https://trezor.io/learn/a/firmware-changelog"
+          "url": "https://github.com/trezor/trezor-firmware/blob/main/core/CHANGELOG.T2B1.md"
         }
       ]
     },

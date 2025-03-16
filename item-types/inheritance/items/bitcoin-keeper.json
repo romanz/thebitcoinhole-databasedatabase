@@ -5,13 +5,13 @@
   "company": "bit-hyve",
   "payment-methods": {
     "btc-on-chain": {
-      "value": "SOON",
-      "flag": "neutral",
+      "value": "YES",
+      "flag": "positive",
       "supported": true
     },
     "btc-lightning": {
-      "value": "SOON",
-      "flag": "neutral",
+      "value": "YES",
+      "flag": "positive",
       "supported": true
     },
     "alt-coins": {
