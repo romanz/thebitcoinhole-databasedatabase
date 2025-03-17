@@ -440,7 +440,13 @@
     "android-release-notes": {
       "value": "NO",
       "supported": false,
-      "flag": "negative"
+      "flag": "negative",
+      "links": [
+        {
+          "title": "Release Notes",
+          "url": "https://github.com/ProtonWallet/flutter-app/blob/master/CHANGELOG.md"
+        }
+      ]
     },
     "android-source-available": {
       "value": "YES",
@@ -476,35 +482,63 @@
   },
   "ios-support": {
     "ios-supported": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Download from Apple Store",
+          "url": "https://apps.apple.com/us/app/proton-wallet-secure-btc/id6479609548"
+        }
+      ]
+    },
+    "ios-latest-version": {
+      "value": "v1.0.8"
+    },
+    "ios-latest-release-date": {
+      "value": "Feb 21, 2025"
+    },
+    "ios-release-notes": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative",
+      "links": [
+        {
+          "title": "Release Notes",
+          "url": "https://github.com/ProtonWallet/flutter-app/blob/master/CHANGELOG.md"
+        }
+      ]
+    },
+    "ios-source-available": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive",
+      "links": [
+        {
+          "title": "Source Code",
+          "url": "https://github.com/ProtonWallet/flutter-app"
+        }
+      ]
+    },
+    "ios-open-source": {
+      "value": "YES",
+      "supported": true,
+      "flag": "positive"
+    },
+    "ios-license": {
+      "value": "GPLv3",
+      "supported": true,
+      "links": [
+        {
+          "title": "License",
+          "url": "https://github.com/ProtonWallet/flutter-app/blob/master/LICENSE"
+        }
+      ]
+    },
+    "ios-reproducible-builds": {
       "value": "NO",
       "supported": false,
       "flag": "negative"
-    },
-    "ios-latest-version": {
-      "value": "-"
-    },
-    "ios-latest-release-date": {
-      "value": "-"
-    },
-    "ios-release-notes": {
-      "value": "-",
-      "supported": false
-    },
-    "ios-source-available": {
-      "value": "-",
-      "supported": false
-    },
-    "ios-open-source": {
-      "value": "-",
-      "supported": false
-    },
-    "ios-license": {
-      "value": "-",
-      "supported": false
-    },
-    "ios-reproducible-builds": {
-      "value": "-",
-      "supported": false
     }
   },
   "web-support": {
