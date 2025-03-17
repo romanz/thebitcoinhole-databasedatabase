@@ -44,7 +44,6 @@ processReleases();
 function fetchRelease(itemType, json) {
 
     const itemId = json["item-id"]
-    const platforms = json.platforms
     const changelogUrl = json["changelog-url"]
     const githubOwner = json["github-org"]
     const githubRepo = json["github-repo"]
@@ -730,6 +729,18 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
         appendTextToTweet(`\n\nRelease notes: ${changelogUrl}`)
         appendTextToNostr(`\n\nRelease notes: ${changelogUrl}`)
     }
+
+    var tbhPromo
+    if (itemType == "software-wallets") {
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Software Wallets at https://thebitcoinhole.com/software-wallets"
+    } else if (itemType == "hardware-wallets") {
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Hardware Wallets at https://thebitcoinhole.com/hardware-wallets"
+    } else if (itemType == "bitcoin-nodes") {
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Nodes at https://thebitcoinhole.com/bitcoin-nodes"
+    }
+    appendTextToTweet(tbhPromo)
+    appendTextToNostr(tbhPromo)
+
     postTweet();
     postNostr();
     console.log("-------------------")
