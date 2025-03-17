@@ -14,9 +14,7 @@ const client = new TwitterApi({
 });
 
 async function postTweetWithImage(tweetText, imagePath = null) {
-  if (twitterEnabled == true) {
     try {
-  
       if (imagePath != null) {
         const mediaData = await client.v1.uploadMedia(imagePath);
         const tweet = await client.v2.tweet({
@@ -38,7 +36,6 @@ async function postTweetWithImage(tweetText, imagePath = null) {
       text = ""
       imagePath = null
     }
-  }
 }
 
 const MAX_TWEET_CHARS = 280
@@ -74,5 +71,7 @@ async function postTweet() {
   console.log("====================")
   console.log(text)
   console.log("====================")
-  postTweetWithImage(text, imagePath)
+  if (twitterEnabled == true) {
+    postTweetWithImage(text, imagePath)
+  }
 }

@@ -724,11 +724,11 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
         appendNostrPublicKeyTag(brand?.nostr?.url.split('/').pop())
     }
 
-    appendTextToTweet(` ${version} released.\n\n`)
-    appendTextToNostr(` ${version} released.\n\n`)
+    appendTextToTweet(` ${version} released.`)
+    appendTextToNostr(` ${version} released.`)
     if (changelogUrl) {
-        appendTextToTweet(`Release notes: ${changelogUrl}`)
-        appendTextToNostr(`Release notes: ${changelogUrl}`)
+        appendTextToTweet(`\n\nRelease notes: ${changelogUrl}`)
+        appendTextToNostr(`\n\nRelease notes: ${changelogUrl}`)
     }
     postTweet();
     postNostr();
