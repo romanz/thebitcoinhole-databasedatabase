@@ -1,3 +1,12 @@
+const crypto = require('crypto');
+
+// Polyfill for getRandomValues in Node.js
+if (!globalThis.crypto) {
+    globalThis.crypto = {
+        getRandomValues: (buffer) => crypto.randomFillSync(buffer),
+    };
+}
+
 const NostrTools = require('nostr-tools');
 const WebSocket = require('ws');
 const dotenv = require('dotenv');
