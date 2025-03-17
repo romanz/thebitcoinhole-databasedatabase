@@ -72,6 +72,6 @@ async function postTweet() {
   console.log(text)
   console.log("====================")
   if (twitterEnabled == true) {
-    postTweetWithImage(text, imagePath)
+    await postTweetWithImage(text, imagePath)
   }
 }
