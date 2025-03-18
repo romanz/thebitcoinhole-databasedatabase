@@ -718,13 +718,14 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
         appendTextToTweet(` by ${brand.twitter.value}`)
     }
 
+    appendTextToTweet(` ${version} released`)
+    appendTextToNostr(` ${version} released`)
+
     if (brand?.nostr?.url) {
         appendTextToNostr(` by #[0]`)
         appendNostrPublicKeyTag(brand?.nostr?.url.split('/').pop())
     }
 
-    appendTextToTweet(` ${version} released.`)
-    appendTextToNostr(` ${version} released.`)
     if (changelogUrl) {
         appendTextToTweet(`\n\nRelease notes: ${changelogUrl}`)
         appendTextToNostr(`\n\nRelease notes: ${changelogUrl}`)
