@@ -106,7 +106,7 @@ All the features supported:
 | Size & Materials | size-materials | Warranty | warranty |
 | Size & Materials | size-materials | Weight | weight |
 | Size & Materials | size-materials | Dimensions | dimensions |
-| Size & Materials | size-materials | Materials | materials |
+| Size & Materials | size-materials | Casing Material | materials |
 | Size & Materials | size-materials | Available in colors | available-in-colors |
 | Size & Materials | size-materials | Waterproof | waterproof |
 | Display | display | Screen | screen |
@@ -167,6 +167,7 @@ All the features supported:
 | Private Keys | private-keys | Shamir Backup (SLIP39) | shamir-backup |
 | Private Keys | private-keys | Seed XOR | seed-xor |
 | Private Keys | private-keys | Backup / recovery on microSD card | backup-recovery-microsd |
+| Private Keys | private-keys | Backup / recovery on NFC card | backup-recovery-nfc-card |
 | Private Keys | private-keys | 12 Words BIP39 Seed Creation | create-12-words |
 | Private Keys | private-keys | 24 Words BIP39 Seed Creation | create-24-words |
 | Private Keys | private-keys | 12/24 BIP39 Words Display | display-12-24-words |
@@ -186,6 +187,7 @@ All the features supported:
 | Signing | signing | UR2.0 Animated QRs | ur-2-animated-qrs |
 | Signing | signing | BBQr | bbqr |
 | Signing | signing | NFC Push Tx | nfc-push-tx |
+| Signing | signing | Sign Messages | message-signing |
 | Fees | fees | Fee Control | fee-control |
 | Fees | fees | Replace-by-fee (RBF) | replace-by-fee |
 | Fees | fees | Child-pays-for-parent (CPFP) | child-pays-for-parent |

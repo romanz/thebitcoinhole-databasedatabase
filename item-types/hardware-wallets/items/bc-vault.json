@@ -384,6 +384,11 @@
         "Encrypted Micro SD card backup"
       ]
     },
+    "backup-recovery-nfc-card": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
     "create-12-words": {
       "value": "NO",
       "supported": false,

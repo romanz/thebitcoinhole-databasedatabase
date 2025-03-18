@@ -365,6 +365,11 @@
       "supported": false,
       "flag": "negative"
     },
+    "backup-recovery-nfc-card": {
+      "value": "NO",
+      "supported": false,
+      "flag": "negative"
+    },
     "create-12-words": {
       "value": "YES",
       "supported": true,
