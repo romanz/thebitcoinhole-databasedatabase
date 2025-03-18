@@ -732,11 +732,11 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
 
     var tbhPromo
     if (itemType == "software-wallets") {
-        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Software Wallets at https://thebitcoinhole.com/software-wallets"
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Software Wallets. https://thebitcoinhole.com/software-wallets"
     } else if (itemType == "hardware-wallets") {
-        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Hardware Wallets at https://thebitcoinhole.com/hardware-wallets"
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Hardware Wallets. https://thebitcoinhole.com/hardware-wallets"
     } else if (itemType == "bitcoin-nodes") {
-        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Nodes at https://thebitcoinhole.com/bitcoin-nodes"
+        tbhPromo = "\n\nDiscover and compare the Best Bitcoin Nodes. https://thebitcoinhole.com/bitcoin-nodes"
     }
     appendTextToTweet(tbhPromo)
     appendTextToNostr(tbhPromo)
