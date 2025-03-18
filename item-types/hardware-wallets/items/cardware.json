@@ -383,11 +383,6 @@
       "supported": false,
       "flag": "negative"
     },
-    "backup-recovery-seedphrase": {
-      "value": "On Device",
-      "supported": true,
-      "flag": "positive"
-    },
     "create-12-words": {
       "value": "NO",
       "supported": false,
