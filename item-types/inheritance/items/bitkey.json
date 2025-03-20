@@ -2,7 +2,6 @@
   "id": "bitkey",
   "name": "Bitkey",
   "purchasable": true,
-  "coming-soon": true,
   "company": "block",
   "payment-methods": {
     "btc-on-chain": {
@@ -52,7 +51,8 @@
       "supported": false
     },
     "beneficiary-key-lost-protection": {
-      "value": "?",
+      "value": "NO",
+      "flag": "negative",
       "supported": false
     },
     "health-checks": {
