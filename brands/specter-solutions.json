@@ -6,8 +6,8 @@
     "value": "Liechtenstein"
   },
   "website": {
-    "value": "Website",
-    "url": "https://specter.solutions/desktop/"
+    "value": "specter.solutions",
+    "url": "https://specter.solutions/"
   },
   "blog": {
     "value": "Blog",
@@ -21,7 +21,8 @@
     "value": "-"
   },
   "youtube": {
-    "value": "-"
+    "value": "@specter163",
+    "url": "https://www.youtube.com/@specter163"
   },
   "github": {
     "value": "cryptoadvance",
