@@ -713,14 +713,14 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
         appendTextToTweet(` (${platforms})`)
         appendTextToNostr(` (${platforms})`)
     }
-    var brand = readJSONFile(`../brands/${brandId}.json`)
-    if (brand?.twitter?.value) {
-        appendTextToTweet(` by ${brand.twitter.value}`)
-    }
 
     appendTextToTweet(` ${version} released`)
     appendTextToNostr(` ${version} released`)
 
+    var brand = readJSONFile(`../brands/${brandId}.json`)
+    if (brand?.twitter?.value) {
+        appendTextToTweet(` by ${brand.twitter.value}`)
+    }
     if (brand?.nostr?.url) {
         appendTextToNostr(` by #[0]`)
         appendNostrPublicKeyTag(brand?.nostr?.url.split('/').pop())
