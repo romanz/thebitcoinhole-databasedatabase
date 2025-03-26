@@ -355,6 +355,7 @@ function fetchRelease(itemType, json) {
     
                 // Keystone
                 latestVersion = latestVersion.replace(/-BTC$/, '');
+                latestVersion = latestVersion.replace(/-btc$/, '');
     
                 // Grid+ Lattice1
                 latestVersion = latestVersion.replace(/^HSM-/, '');
