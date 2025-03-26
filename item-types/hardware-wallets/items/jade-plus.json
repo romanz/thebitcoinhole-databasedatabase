@@ -538,12 +538,9 @@
       "flag": "positive"
     },
     "taproot": {
-      "value": "Partial",
+      "value": "YES",
       "supported": true,
-      "flag": "neutral",
-      "texts": [
-        "Support for sending to Taproot (“P2TR”) addresses."
-      ]
+      "flag": "positive"
     }
   },
   "addresses": {
