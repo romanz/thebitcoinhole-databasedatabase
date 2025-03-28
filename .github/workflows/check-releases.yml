@@ -21,6 +21,16 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
+    - name: Check if new-releases branch exists
+      run: |
+        BRANCH_NAME="new-releases"
+        if git ls-remote --heads origin "$BRANCH_NAME" | grep -q "$BRANCH_NAME"; then
+          echo "Branch '$BRANCH_NAME' exists. Failing the job."
+          exit 1
+        else
+          echo "Branch '$BRANCH_NAME' does not exist. Continuing..."
+        fi      
+
     - name: Set up Node.js
       uses: actions/setup-node@v2
       with:

@@ -744,6 +744,10 @@ function postNewRelease(itemType, itemId, itemName, version, changelogUrl, brand
     appendTextToNostr(tbhPromo)
 
     postTweet();
+    
+    // This is added to wait for a fail on Twitter posting
+    sleep(2000);
+
     postNostr();
     console.log("-------------------")
 }
