@@ -1,6 +1,6 @@
 # The Bitcoin Hole
 
-## Databse
+## Database
 
 This repository goal is to have the more complete database of Hardware Wallets, Software Wallets, Bitcoin Nodes, Seed Backup Solutions, Inheritance Services & Bitcoin Books features, so they can be compared, helping users to choose wisely. The database is open-source, meaning anyone can collaborate to improve and correct any wrong data or add new items.
 
